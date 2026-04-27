@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Macomb Flood Response Platform</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;650;750;850;900&display=swap" rel="stylesheet">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+<script src="app.js?v=20260427-layers" defer></script>
+</head>
+<body>
+<div class="site-shell">
+<header class="topbar">
+  <nav class="nav" aria-label="Primary">
+    <a href="index.html" class="brand">
+      <span class="logo">MFR</span>
+      <span class="brand-text"><strong>Macomb Flood Response</strong><span>Insurance, assistance, maps, and claim packet builder</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#emergency" class="active">Emergency</a>
+      <a href="#issues">Issues</a>
+      <a href="#gis">GIS</a>
+      <a href="#insurance">Insurance</a>
+      <a href="#visuals">Claim</a>
+      <a href="#assistance">Assistance</a>
+      <a href="#housing">Housing</a>
+      <a href="building-repairs.html">Building</a>
+      <a href="#community">Community</a>
+      <a href="#packet">Packet</a>
+      <a href="sources.html">Sources</a>
+    </div>
+  </nav>
+</header>
+
+<main class="app-main">
+  <section class="status-strip" aria-label="Case status">
+    <div>
+      <p class="eyebrow">Resident flood response</p>
+      <h1>Macomb Flood Response Platform</h1>
+      <p class="lead">Start with emergency status, choose the issue at hand, then move into flood maps, insurance, housing, aid, rebuilding, community support, and claim packet tools.</p>
+    </div>
+    <div class="case-metrics" aria-label="Case metrics">
+      <div class="metric"><span id="metricItems">0</span><small>items</small></div>
+      <div class="metric"><span id="metricTotal">$0</span><small>estimated</small></div>
+      <div class="metric"><span id="metricAssistance">0</span><small>needs</small></div>
+      <div class="metric"><span id="metricRisk">--</span><small>risk score</small></div>
+    </div>
+  </section>
+
+  <section class="section-band triage-band" id="emergency">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Start here</p>
+        <h2>Are you in an emergency right now?</h2>
+      </div>
+      <p>The platform changes the first steps based on whether the person needs immediate safety help or recovery guidance.</p>
+    </div>
+    <div class="triage-grid">
+      <article class="triage-card urgent">
+        <p class="eyebrow">Immediate danger</p>
+        <h3>Water is rising, power is unsafe, exits are blocked, or someone may be hurt.</h3>
+        <ul>
+          <li>Move people and pets away from floodwater.</li>
+          <li>Avoid electrical panels, outlets, standing water, and submerged roads.</li>
+          <li>Call emergency services if life safety is at risk.</li>
+        </ul>
+        <div class="action-row">
+          <a class="btn danger" href="#urgentHelp">Open emergency steps</a>
+          <a class="btn ghost" href="#housing">Find a safe place</a>
+        </div>
+      </article>
+      <article class="triage-card">
+        <p class="eyebrow">Not immediate danger</p>
+        <h3>I need to understand risk, insurance, aid, repairs, documents, or community help.</h3>
+        <ul>
+          <li>Choose the issue you are dealing with.</li>
+          <li>Save property details and damage evidence.</li>
+          <li>Build the claim and aid packet as information comes in.</li>
+        </ul>
+        <div class="action-row">
+          <a class="btn primary" href="#issues">Choose an issue</a>
+          <a class="btn secondary" href="#gis">Check map data</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section-band" id="urgentHelp">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Emergency mode</p>
+        <h2>First decisions during flooding</h2>
+      </div>
+      <p>Short, practical steps for the high-stress moment before insurance or paperwork matters.</p>
+    </div>
+    <div class="grid three">
+      <article class="info-card rose"><h3>Life safety</h3><p>Leave areas with fast water, blocked exits, gas smell, electrical hazards, or medical risk. Do not drive through flooded roads.</p></article>
+      <article class="info-card amber"><h3>Utilities</h3><p>If safe and instructed, shut off power, gas, or water. If the panel is wet or water is near outlets, wait for a qualified professional.</p></article>
+      <article class="info-card blue"><h3>Evidence later</h3><p>Once safe, photograph water lines, damaged rooms, appliances, utilities, exterior flooding, receipts, and temporary lodging costs.</p></article>
+    </div>
+  </section>
+
+  <section class="section-band" id="issues">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Issue router</p>
+        <h2>What do you need help with?</h2>
+      </div>
+      <p>Pick one issue and the system will point you to the right tool, documents, and next action.</p>
+    </div>
+    <div class="issue-grid" id="issueGrid">
+      <button type="button" class="issue-card active" data-issue="flooding"><strong>Flooding now</strong><span>Safety steps, flood extent, road and basement risk.</span></button>
+      <button type="button" class="issue-card" data-issue="maps"><strong>Map and data</strong><span>Elevation, rain by day/month/season/year, flood zones, risk factors.</span></button>
+      <button type="button" class="issue-card" data-issue="insurance"><strong>Insurance</strong><span>Flood vs regular coverage, inside vs outside damage, structure eligibility.</span></button>
+      <button type="button" class="issue-card" data-issue="claim"><strong>Claim packet</strong><span>Photos, videos, receipts, item list, ZIP, print, and forward summary.</span></button>
+      <button type="button" class="issue-card" data-issue="aid"><strong>Aid while waiting</strong><span>Utilities, food, hotel, daycare, housing cost, repairs, financial support.</span></button>
+      <button type="button" class="issue-card" data-issue="housing"><strong>Where to stay</strong><span>Shelters, hotels, temporary housing, reimbursement notes.</span></button>
+      <button type="button" class="issue-card" data-issue="building"><strong>Rebuild stronger</strong><span>Cleanup, permits, codes, elevation, drainage, and floodproofing.</span></button>
+      <button type="button" class="issue-card" data-issue="community"><strong>Help community</strong><span>Volunteer, donate, request supplies, report flooding patterns.</span></button>
+    </div>
+    <article class="tool-panel issue-detail" id="issueDetail" aria-live="polite"></article>
+  </section>
+
+  <section class="app-grid" id="case">
+    <form class="tool-panel" id="residentForm" autocomplete="on">
+      <div class="panel-heading">
+        <p class="eyebrow">Step 1</p>
+        <h2>Resident and structure</h2>
+      </div>
+      <div class="form-grid two">
+        <label>Full name
+          <input id="residentName" name="residentName" type="text" placeholder="Resident name">
+        </label>
+        <label>Phone
+          <input id="phone" name="phone" type="tel" placeholder="(586) 000-0000">
+        </label>
+        <label>Email
+          <input id="email" name="email" type="email" placeholder="resident@example.com">
+        </label>
+        <label>Household size
+          <input id="householdSize" name="householdSize" type="number" min="1" max="20" placeholder="3">
+        </label>
+        <label class="wide">Street address
+          <input id="street" name="street" type="text" placeholder="Address in Macomb County">
+        </label>
+        <label>Area or community
+          <input id="city" name="city" type="text" placeholder="Add/search any area in the GIS panel">
+        </label>
+        <label>ZIP
+          <input id="zip" name="zip" type="text" inputmode="numeric" placeholder="48043">
+        </label>
+        <label>Structure type
+          <select id="structureType" name="structureType">
+            <option>Single-family home</option>
+            <option>Two-to-four family dwelling</option>
+            <option>Condo unit</option>
+            <option>Rental unit</option>
+            <option>Manufactured or mobile home</option>
+            <option>Commercial building</option>
+            <option>Detached garage or shed</option>
+          </select>
+        </label>
+        <label>Foundation or lowest area
+          <select id="foundation" name="foundation">
+            <option>Basement</option>
+            <option>Crawlspace</option>
+            <option>Slab on grade</option>
+            <option>Elevated structure</option>
+            <option>Unknown</option>
+          </select>
+        </label>
+        <label>Flood insurance
+          <select id="floodPolicy" name="floodPolicy">
+            <option>Unknown</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </label>
+        <label>Homeowners/renters insurance
+          <select id="homePolicy" name="homePolicy">
+            <option>Unknown</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </label>
+        <label>Primary damage source
+          <select id="damageCause" name="damageCause">
+            <option>Surface floodwater or rising water</option>
+            <option>Sewer or drain backup</option>
+            <option>Wind-driven rain through roof/window</option>
+            <option>Plumbing or appliance leak</option>
+            <option>Foundation seepage</option>
+            <option>Unknown or mixed source</option>
+          </select>
+        </label>
+        <label>Approximate water depth
+          <select id="waterDepth" name="waterDepth">
+            <option>Under 1 inch</option>
+            <option>1 to 6 inches</option>
+            <option>6 to 18 inches</option>
+            <option>18 inches to 3 feet</option>
+            <option>Over 3 feet</option>
+          </select>
+        </label>
+      </div>
+      <div class="action-row">
+        <button class="btn primary" type="button" id="saveCaseBtn">Save case</button>
+        <button class="btn ghost" type="button" id="sampleCaseBtn">Load sample</button>
+      </div>
+      <p class="fine-print">Coverage guidance is a decision aid only. Final coverage depends on the policy, endorsements, exclusions, damage cause, adjuster review, and official eligibility rules.</p>
+    </form>
+
+    <section class="tool-panel map-panel" id="gis">
+      <div class="panel-heading row">
+        <div>
+          <p class="eyebrow">Interactive GIS visual</p>
+          <h2>Add any area, then compare rain, elevation, flood, and drain layers</h2>
+        </div>
+        <div class="action-row tight">
+          <button class="btn secondary" type="button" id="refreshDataBtn">Refresh data</button>
+          <button class="btn ghost" type="button" id="locationBtn">Use my location</button>
+        </div>
+      </div>
+
+      <div class="gis-controls">
+        <label class="wide">Search city, address, ZIP, or place
+          <div class="inline-control">
+            <input id="areaSearch" type="search" placeholder="Example: Mount Clemens, MI or 48043">
+            <button class="btn primary" type="button" id="searchAreaBtn">Search</button>
+          </div>
+        </label>
+        <div class="search-results" id="areaResults" aria-live="polite"></div>
+        <details class="manual-area">
+          <summary>Add an area by coordinates</summary>
+          <div class="form-grid three compact">
+            <label>Area name
+              <input id="manualAreaName" type="text" placeholder="Neighborhood, street, site name">
+            </label>
+            <label>Latitude
+              <input id="manualLat" type="number" step="0.000001" placeholder="42.5973">
+            </label>
+            <label>Longitude
+              <input id="manualLon" type="number" step="0.000001" placeholder="-82.8780">
+            </label>
+          </div>
+          <button class="btn secondary" type="button" id="manualAreaBtn">Add coordinate area</button>
+        </details>
+      </div>
+
+      <div class="rain-controls">
+        <label>Year
+          <input id="rainYear" type="number" min="1940" max="2100" step="1">
+        </label>
+        <label>Season
+          <select id="rainSeason">
+            <option value="annual">All seasons</option>
+            <option value="winter">Winter</option>
+            <option value="spring">Spring</option>
+            <option value="summer">Summer</option>
+            <option value="fall">Fall</option>
+          </select>
+        </label>
+        <label>Month
+          <select id="rainMonth">
+            <option value="0">All months</option>
+            <option value="1">January</option>
+            <option value="2">February</option>
+            <option value="3">March</option>
+            <option value="4">April</option>
+            <option value="5">May</option>
+            <option value="6">June</option>
+            <option value="7">July</option>
+            <option value="8">August</option>
+            <option value="9">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+          </select>
+        </label>
+        <label>Day
+          <input id="rainDay" type="date">
+        </label>
+        <button class="btn secondary" type="button" id="loadRainBtn">Load rainfall</button>
+      </div>
+      <div class="layer-panel" aria-label="GIS data layer integrations">
+        <div class="panel-heading row">
+          <div>
+            <p class="eyebrow">Integrated data layers</p>
+            <h3>Rain, elevation, Macomb GIS, FEMA flood maps, and drain maps</h3>
+          </div>
+          <button class="btn ghost" type="button" id="loadLayerDataBtn">Refresh layer checks</button>
+        </div>
+        <div class="layer-toggle-grid" id="gisLayerControls"></div>
+        <div class="layer-source-view" id="gisLayerSource"></div>
+        <div class="layer-status-grid" id="gisLayerStatus"></div>
+      </div>
+      <p class="fine-print" id="gisStatus" aria-live="polite"></p>
+      <p class="fine-print">Location access works best from the local server or a hosted HTTPS site. From a file preview, Use my location opens the local-server page first, then the browser can ask for permission. <a class="inline-link" href="http://localhost:8087/index.html#gis">Open location-enabled preview</a>.</p>
+
+      <div class="gis-visual-grid">
+        <div class="map-stage area-map" aria-label="Interactive area rainfall and elevation map">
+          <iframe id="osmFrame" title="OpenStreetMap area view" loading="lazy"></iframe>
+          <svg viewBox="0 0 760 420" role="img" aria-label="Custom added areas plotted by latitude and longitude">
+            <defs>
+              <linearGradient id="terrain" x1="0" x2="1" y1="0" y2="1">
+                <stop stop-color="#f8f3dd"></stop>
+                <stop offset=".52" stop-color="#e5f0e3"></stop>
+                <stop offset="1" stop-color="#dcebf4"></stop>
+              </linearGradient>
+            </defs>
+            <rect width="760" height="420" fill="url(#terrain)"></rect>
+            <path d="M0 335 C120 286 196 338 313 288 C424 240 490 278 612 211 C682 172 721 150 760 132" fill="none" stroke="#6da6be" stroke-width="8" opacity=".55"></path>
+            <path d="M0 292 C140 258 228 273 324 230 C436 180 558 208 760 88" fill="none" stroke="#8ebd82" stroke-width="3" opacity=".45"></path>
+            <path d="M75 80 H705 M75 145 H705 M75 210 H705 M75 275 H705 M75 340 H705 M145 45 V375 M260 45 V375 M375 45 V375 M490 45 V375 M605 45 V375" stroke="#93a19b" stroke-width="1" opacity=".28"></path>
+            <g id="mapLayerOverlay"></g>
+            <g id="areaMarkers"></g>
+            <text x="26" y="390" class="map-label">Custom areas only. Add an area to plot it here.</text>
+          </svg>
+        </div>
+        <div class="area-side">
+          <div class="risk-summary rain-summary">
+            <div>
+              <span class="risk-score" id="riskScore">--</span>
+              <small>GIS score</small>
+            </div>
+            <p id="riskNarrative">Search for an area or add coordinates to start the interactive rainfall and elevation view.</p>
+          </div>
+          <div class="area-list" id="areaList"></div>
+        </div>
+      </div>
+
+      <div class="tool-panel gis-readout" id="gisReadout" aria-live="polite"></div>
+      <div class="rain-card-grid" id="rainCards"></div>
+      <div class="rain-chart" id="rainChart" aria-label="Monthly rainfall chart"></div>
+      <div class="factor-list" id="factorList"></div>
+      <div class="resource-links">
+        <a href="https://open-meteo.com/" target="_blank" rel="noopener">Rain and elevation data</a>
+        <a href="https://gis.macombgov.org/home/layers.html" target="_blank" rel="noopener">Macomb GIS layers</a>
+        <a href="https://msc.fema.gov/portal/search" target="_blank" rel="noopener">FEMA flood maps</a>
+        <a href="https://www.macombgov.org/departments/public-works/public-works-resources/macomb-county-drain-maps" target="_blank" rel="noopener">Drain maps</a>
+      </div>
+    </section>
+  </section>
+
+  <section class="section-band" id="insurance">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Coverage clarity engine</p>
+        <h2>Which insurance responds?</h2>
+      </div>
+      <p>Coverage depends on the cause of damage, where the damage happened, the type of structure, and whether the policy includes the needed coverage.</p>
+    </div>
+    <div class="split-layout">
+      <section class="tool-panel">
+        <div class="coverage-grid">
+          <article class="coverage-card"><strong>Flood insurance</strong><span>Usually for rising surface water, overflow, storm surge, and floodwater entering the building. Basement and contents coverage can be limited.</span></article>
+          <article class="coverage-card"><strong>Regular homeowners/renters</strong><span>Usually for sudden interior water, pipe breaks, roof/window storm intrusion, and covered personal property, subject to policy exclusions.</span></article>
+          <article class="coverage-card"><strong>Sewer backup endorsement</strong><span>Often needed when damage comes through drains or sewer lines instead of direct surface flooding.</span></article>
+          <article class="coverage-card"><strong>Aid or appeal route</strong><span>Used when insurance does not cover the loss, coverage is denied, or the resident needs help while waiting.</span></article>
+        </div>
+      </section>
+      <section class="tool-panel">
+        <h3>Inside vs outside damage</h3>
+        <div class="table-wrap compact-table">
+          <table>
+            <thead><tr><th>Damage area</th><th>Common path</th><th>Watch point</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Interior structure</strong></td><td>Flood or regular policy depending on water source.</td><td>Cause matters more than location.</td></tr>
+              <tr><td><strong>Contents</strong></td><td>Contents coverage, renters policy, or aid.</td><td>Basement contents may be limited.</td></tr>
+              <tr><td><strong>Detached garage/shed</strong></td><td>Separate limits or exclusions.</td><td>Structure type can change eligibility.</td></tr>
+              <tr><td><strong>Yard, fences, landscaping</strong></td><td>Often excluded or limited.</td><td>Document anyway for aid or local reporting.</td></tr>
+              <tr><td><strong>Hotel/temporary living</strong></td><td>Usually not NFIP flood coverage.</td><td>May need homeowners ALE, FEMA, local aid, or nonprofit help.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="section-band" id="visuals">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Step 2</p>
+        <h2>Visual intake and smart review</h2>
+      </div>
+      <p>Upload photos, videos, or receipts. The platform creates suggested claim items, asks for verification, then adds verified items to the inventory.</p>
+    </div>
+    <div class="split-layout">
+      <section class="tool-panel">
+        <label class="upload-zone" for="visualUpload">
+          <span>Drop or select photos, videos, receipts, and damage visuals</span>
+          <input id="visualUpload" type="file" accept="image/*,video/*,.pdf,.txt,.csv" multiple>
+        </label>
+        <div class="action-row">
+          <button class="btn primary" type="button" id="analyzeBtn">Analyze visuals</button>
+          <button class="btn ghost" type="button" id="sampleVisualBtn">Add sample visuals</button>
+        </div>
+        <div class="file-grid" id="uploadPreview" aria-live="polite"></div>
+      </section>
+
+      <section class="tool-panel">
+        <div class="panel-heading row">
+          <div>
+            <p class="eyebrow">Verification required</p>
+            <h3>Pending suggestions</h3>
+          </div>
+          <span class="status-pill" id="pendingCount">0 pending</span>
+        </div>
+        <div class="suggestion-list" id="pendingList"></div>
+      </section>
+    </div>
+  </section>
+
+  <section class="section-band" id="inventory">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Step 3</p>
+        <h2>Verified damage inventory</h2>
+      </div>
+      <button class="btn secondary" type="button" id="manualItemBtn">Add manual item</button>
+    </div>
+    <div class="table-wrap inventory-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Item or area</th>
+            <th>Damage type</th>
+            <th>Location</th>
+            <th>Coverage route</th>
+            <th>Receipt or price</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="inventoryRows">
+          <tr><td colspan="6" class="empty-cell">No verified items yet. Upload visuals or add a manual item.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section-band" id="assistance">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Step 4</p>
+        <h2>Assistance needs</h2>
+      </div>
+      <p>Track non-insurance support for utilities, childcare, housing, food, hotels, repairs, and rebuilding.</p>
+    </div>
+    <div class="split-layout">
+      <section class="tool-panel">
+        <div class="check-grid" id="assistanceChecks">
+          <label><input type="checkbox" value="electricity"> Electricity shutoff or bill help</label>
+          <label><input type="checkbox" value="heat"> Heat or HVAC loss</label>
+          <label><input type="checkbox" value="water"> Water, sewer, or plumbing help</label>
+          <label><input type="checkbox" value="daycare"> Daycare or school disruption</label>
+          <label><input type="checkbox" value="housing"> Housing or rent/mortgage support</label>
+          <label><input type="checkbox" value="hotel"> Hotel or temporary lodging fees</label>
+          <label><input type="checkbox" value="repairs"> Home repairs or cleanup</label>
+          <label><input type="checkbox" value="food"> Food replacement</label>
+          <label><input type="checkbox" value="building"> Building permits, elevation, or mitigation</label>
+        </div>
+      </section>
+      <section class="tool-panel">
+        <div class="panel-heading row">
+          <div>
+            <p class="eyebrow">Referral builder</p>
+            <h3>Suggested next contacts</h3>
+          </div>
+          <a class="btn ghost" href="https://www.macombgov.org/departments/macomb-community-action/emergency-services" target="_blank" rel="noopener">MCA services</a>
+        </div>
+        <div class="assistance-plan" id="assistancePlan"></div>
+      </section>
+    </div>
+  </section>
+
+  <section class="section-band" id="housing">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Temporary housing</p>
+        <h2>Where can someone live during the gap?</h2>
+      </div>
+      <p>Flood recovery often includes days or weeks before insurance, reimbursement, or repairs catch up.</p>
+    </div>
+    <div class="grid three">
+      <article class="resource-card action-card"><strong>Immediate shelter</strong><span>Use for unsafe homes, no heat, no power, contamination, blocked access, or evacuation.</span><a href="https://www.macombgov.org/departments/emergency-management" target="_blank" rel="noopener">Macomb Emergency Management</a></article>
+      <article class="resource-card action-card"><strong>Hotel and lodging costs</strong><span>Track nightly rate, taxes, dates, reason for displacement, and whether the policy has additional living expense coverage.</span><a href="#packet">Add to packet</a></article>
+      <article class="resource-card action-card"><strong>Rent or mortgage pressure</strong><span>Keep lease, mortgage, income, hotel, repair, and displacement records together for aid screening.</span><a href="https://www.macombgov.org/departments/macomb-community-action/emergency-services" target="_blank" rel="noopener">Emergency services</a></article>
+    </div>
+  </section>
+
+  <section class="section-band" id="building-policy">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Building and policy</p>
+        <h2>Repair, rebuild, and counteract future flooding</h2>
+      </div>
+      <p>This section now opens a dedicated help page for cleanup, permits, substantial damage review, resilience upgrades, and repair documentation.</p>
+    </div>
+    <div class="split-layout">
+      <section class="tool-panel">
+        <div class="steps">
+          <div class="step"><div><h3>Immediate fixes</h3><p>Water extraction, electrical inspection, HVAC checks, mold prevention, debris removal, and safe access documentation.</p></div></div>
+          <div class="step"><div><h3>Rebuild requirements</h3><p>Permits, inspections, substantial damage review, elevation certificates, contractor estimates, and code-triggered repairs.</p></div></div>
+          <div class="step"><div><h3>Resilience upgrades</h3><p>Backflow valves, sump backup, raised utilities, flood-resistant materials, grading, drainage improvements, and protected mechanical systems.</p></div></div>
+        </div>
+        <div class="hero-actions">
+          <a class="btn primary" href="building-repairs.html">Open building repair page</a>
+          <a class="btn secondary" href="resilient-home.html">Flood-proof home guide</a>
+        </div>
+      </section>
+      <section class="tool-panel">
+        <h3>Where current policy can fail</h3>
+        <div class="policy-list">
+          <p><strong>Maps can lag reality:</strong> regulatory flood maps may not fully show intense rainfall, sewer backup, or fast-changing urban drainage.</p>
+          <p><strong>Minimum codes are not enough:</strong> legal compliance can still leave basements, utilities, and contents vulnerable.</p>
+          <p><strong>Homes need layered protection:</strong> elevation, drainage, materials, utility placement, and stormwater capacity must work together.</p>
+          <p><strong>Implementation idea:</strong> require clearer homeowner risk explanations, better public drainage data, freeboard guidance, and retrofit incentives for repeat-loss areas.</p>
+        </div>
+        <div class="hero-actions">
+          <a class="btn ghost" href="laws-codes.html">Read laws and code gaps</a>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="section-band" id="community">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Community response</p>
+        <h2>Request help, offer help, and report patterns</h2>
+      </div>
+      <p>Flooding is a neighborhood problem as much as an individual claim problem.</p>
+    </div>
+    <div class="grid three">
+      <article class="info-card green"><h3>Request help</h3><p>Cleanup, food delivery, transportation, childcare, supplies, accessibility support, or help moving damaged items.</p></article>
+      <article class="info-card blue"><h3>Offer help</h3><p>Volunteer time, tools, pumps, dehumidifiers, meals, temporary storage, translation, rides, or documentation support.</p></article>
+      <article class="info-card amber"><h3>Report flood patterns</h3><p>Submit repeated street flooding, blocked drains, sewer backup clusters, water depth, and dates to improve community planning.</p></article>
+    </div>
+  </section>
+
+  <section class="section-band" id="data-host">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Actual-data host</p>
+        <h2>Data sources this platform is designed to host</h2>
+      </div>
+      <p>The site is structured so sample data can be replaced by official feeds, GIS layers, or uploaded datasets.</p>
+    </div>
+    <div class="data-grid">
+      <article><strong>Rainfall</strong><span>Annual, seasonal, monthly, daily, and storm-event precipitation for the chosen location.</span></article>
+      <article><strong>Elevation</strong><span>Ground elevation and low-point logic for why water collects in specific areas.</span></article>
+      <article><strong>Flood zones and extent</strong><span>FEMA flood maps, historical flood extents, and local drainage problem areas.</span></article>
+      <article><strong>Soil and surface</strong><span>Soil drainage plus roads, roofs, parking lots, and other impervious surfaces.</span></article>
+      <article><strong>Sewer and waterways</strong><span>Storm sewer capacity, nearby drains, rivers, creeks, canals, and outlet constraints.</span></article>
+      <article><strong>Aid and programs</strong><span>Local, state, federal, nonprofit, and insurance reimbursement options.</span></article>
+    </div>
+  </section>
+
+  <section class="section-band" id="packet">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Step 5</p>
+        <h2>Packet builder</h2>
+      </div>
+      <p>Review the assembled documents, then print, download a ZIP packet, or forward the summary.</p>
+    </div>
+    <div class="app-grid">
+      <form class="tool-panel" id="packetForm">
+        <div class="form-grid two">
+          <label>Insurance company
+            <input id="insurerName" name="insurerName" type="text" placeholder="Insurer or adjuster">
+          </label>
+          <label>Policy or claim number
+            <input id="policyNumber" name="policyNumber" type="text" placeholder="Policy / claim #">
+          </label>
+          <label>Adjuster or caseworker email
+            <input id="forwardEmail" name="forwardEmail" type="email" placeholder="email@example.com">
+          </label>
+          <label>Preferred contact method
+            <select id="contactMethod" name="contactMethod">
+              <option>Email</option>
+              <option>Phone</option>
+              <option>Mail</option>
+              <option>Text</option>
+            </select>
+          </label>
+          <label class="wide">Resident notes
+            <textarea id="residentNotes" name="residentNotes" rows="5" placeholder="Access issues, safety hazards, medical needs, lodging, or details the adjuster should know."></textarea>
+          </label>
+        </div>
+        <div class="action-row">
+          <button class="btn primary" type="button" id="zipBtn">Download ZIP packet</button>
+          <button class="btn secondary" type="button" id="printBtn">Print packet</button>
+          <button class="btn ghost" type="button" id="forwardBtn">Forward summary</button>
+          <button class="btn danger" type="button" id="clearBtn">Clear case</button>
+        </div>
+        <p class="fine-print">The ZIP includes claim-summary.html, inventory.csv, resident-info.json, assistance-checklist.txt, uploaded visuals, and receipts added during this session.</p>
+      </form>
+      <section class="document-preview" id="documentPreview" aria-live="polite"></section>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p><strong>Important:</strong> This prototype helps organize information and documents. It does not decide insurance coverage, legal eligibility, benefits, code compliance, or permit approval. Confirm final requirements with the insurer, local floodplain administrator, building official, licensed contractor, engineer, or assistance agency.</p>
+</footer>
+</div>
+</body>
+</html>
