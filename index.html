@@ -1,612 +1,846 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Macomb Flood Response Platform</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;650;750;850;900&display=swap" rel="stylesheet">
-<link rel="icon" href="data:,">
-<link rel="stylesheet" href="style.css">
-<script src="app.js?v=20260427-layers" defer></script>
-</head>
-<body>
-<div class="site-shell">
-<header class="topbar">
-  <nav class="nav" aria-label="Primary">
-    <a href="index.html" class="brand">
-      <span class="logo">MFR</span>
-      <span class="brand-text"><strong>Macomb Flood Response</strong><span>Insurance, assistance, maps, and claim packet builder</span></span>
-    </a>
-    <div class="nav-links">
-      <a href="#emergency" class="active">Emergency</a>
-      <a href="#issues">Issues</a>
-      <a href="#gis">GIS</a>
-      <a href="#insurance">Insurance</a>
-      <a href="#visuals">Claim</a>
-      <a href="#assistance">Assistance</a>
-      <a href="#housing">Housing</a>
-      <a href="building-repairs.html">Building</a>
-      <a href="#community">Community</a>
-      <a href="#packet">Packet</a>
-      <a href="sources.html">Sources</a>
-    </div>
-  </nav>
-</header>
-
-<main class="app-main">
-  <section class="status-strip" aria-label="Case status">
-    <div>
-      <p class="eyebrow">Resident flood response</p>
-      <h1>Macomb Flood Response Platform</h1>
-      <p class="lead">Start with emergency status, choose the issue at hand, then move into flood maps, insurance, housing, aid, rebuilding, community support, and claim packet tools.</p>
-    </div>
-    <div class="case-metrics" aria-label="Case metrics">
-      <div class="metric"><span id="metricItems">0</span><small>items</small></div>
-      <div class="metric"><span id="metricTotal">$0</span><small>estimated</small></div>
-      <div class="metric"><span id="metricAssistance">0</span><small>needs</small></div>
-      <div class="metric"><span id="metricRisk">--</span><small>risk score</small></div>
-    </div>
-  </section>
-
-  <section class="section-band triage-band" id="emergency">
-    <div class="section-heading">
-      <div>
-        <p class="eyebrow">Start here</p>
-        <h2>Are you in an emergency right now?</h2>
-      </div>
-      <p>The platform changes the first steps based on whether the person needs immediate safety help or recovery guidance.</p>
-    </div>
-    <div class="triage-grid">
-      <article class="triage-card urgent">
-        <p class="eyebrow">Immediate danger</p>
-        <h3>Water is rising, power is unsafe, exits are blocked, or someone may be hurt.</h3>
-        <ul>
-          <li>Move people and pets away from floodwater.</li>
-          <li>Avoid electrical panels, outlets, standing water, and submerged roads.</li>
-          <li>Call emergency services if life safety is at risk.</li>
-        </ul>
-        <div class="action-row">
-          <a class="btn danger" href="#urgentHelp">Open emergency steps</a>
-          <a class="btn ghost" href="#housing">Find a safe place</a>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hydrogen Energy Field Guide | Element and Types</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary">
+      <a class="brand" href="index.html" aria-label="Hydrogen Energy Field Guide">
+        <span class="brand-mark">H2</span>
+        <span>Hydrogen Field Guide</span>
+      </a>
+      <nav class="site-nav" aria-label="Pages">
+        <a class="nav-button active" href="index.html" aria-current="page">Element &amp; Types</a>
+        <a class="nav-button" href="mobility.html">Mobility</a>
+        <a class="nav-button" href="infrastructure.html">Infrastructure Study</a>
+      </nav>
+    </header>
+    <aside class="program-strip" aria-label="Program context">
+      <span>Prepared for</span>
+      <strong>LightWorks Innovator Accelerator</strong>
+      <span>Evidence-led hydrogen energy research guide</span>
+    </aside>
+    <main>
+<section class="page-section active standalone" id="element" aria-labelledby="element-title">
+        <div class="section-heading">
+          <p class="eyebrow">Page 1</p>
+          <h2 id="element-title">Hydrogen as an Element and Energy Carrier</h2>
+          <p>
+            Hydrogen is abundant in compounds such as water and hydrocarbons, but pure H2 has to be produced. That production pathway determines whether using it helps the climate or simply moves emissions upstream.
+          </p>
         </div>
-      </article>
-      <article class="triage-card">
-        <p class="eyebrow">Not immediate danger</p>
-        <h3>I need to understand risk, insurance, aid, repairs, documents, or community help.</h3>
-        <ul>
-          <li>Choose the issue you are dealing with.</li>
-          <li>Save property details and damage evidence.</li>
-          <li>Build the claim and aid packet as information comes in.</li>
-        </ul>
-        <div class="action-row">
-          <a class="btn primary" href="#issues">Choose an issue</a>
-          <a class="btn secondary" href="#gis">Check map data</a>
-        </div>
-      </article>
-    </div>
-  </section>
 
-  <section class="section-band" id="urgentHelp">
-    <div class="section-heading">
-      <div>
-        <p class="eyebrow">Emergency mode</p>
-        <h2>First decisions during flooding</h2>
-      </div>
-      <p>Short, practical steps for the high-stress moment before insurance or paperwork matters.</p>
-    </div>
-    <div class="grid three">
-      <article class="info-card rose"><h3>Life safety</h3><p>Leave areas with fast water, blocked exits, gas smell, electrical hazards, or medical risk. Do not drive through flooded roads.</p></article>
-      <article class="info-card amber"><h3>Utilities</h3><p>If safe and instructed, shut off power, gas, or water. If the panel is wet or water is near outlets, wait for a qualified professional.</p></article>
-      <article class="info-card blue"><h3>Evidence later</h3><p>Once safe, photograph water lines, damaged rooms, appliances, utilities, exterior flooding, receipts, and temporary lodging costs.</p></article>
-    </div>
-  </section>
-
-  <section class="section-band" id="issues">
-    <div class="section-heading">
-      <div>
-        <p class="eyebrow">Issue router</p>
-        <h2>What do you need help with?</h2>
-      </div>
-      <p>Pick one issue and the system will point you to the right tool, documents, and next action.</p>
-    </div>
-    <div class="issue-grid" id="issueGrid">
-      <button type="button" class="issue-card active" data-issue="flooding"><strong>Flooding now</strong><span>Safety steps, flood extent, road and basement risk.</span></button>
-      <button type="button" class="issue-card" data-issue="maps"><strong>Map and data</strong><span>Elevation, rain by day/month/season/year, flood zones, risk factors.</span></button>
-      <button type="button" class="issue-card" data-issue="insurance"><strong>Insurance</strong><span>Flood vs regular coverage, inside vs outside damage, structure eligibility.</span></button>
-      <button type="button" class="issue-card" data-issue="claim"><strong>Claim packet</strong><span>Photos, videos, receipts, item list, ZIP, print, and forward summary.</span></button>
-      <button type="button" class="issue-card" data-issue="aid"><strong>Aid while waiting</strong><span>Utilities, food, hotel, daycare, housing cost, repairs, financial support.</span></button>
-      <button type="button" class="issue-card" data-issue="housing"><strong>Where to stay</strong><span>Shelters, hotels, temporary housing, reimbursement notes.</span></button>
-      <button type="button" class="issue-card" data-issue="building"><strong>Rebuild stronger</strong><span>Cleanup, permits, codes, elevation, drainage, and floodproofing.</span></button>
-      <button type="button" class="issue-card" data-issue="community"><strong>Help community</strong><span>Volunteer, donate, request supplies, report flooding patterns.</span></button>
-    </div>
-    <article class="tool-panel issue-detail" id="issueDetail" aria-live="polite"></article>
-  </section>
-
-  <section class="app-grid" id="case">
-    <form class="tool-panel" id="residentForm" autocomplete="on">
-      <div class="panel-heading">
-        <p class="eyebrow">Step 1</p>
-        <h2>Resident and structure</h2>
-      </div>
-      <div class="form-grid two">
-        <label>Full name
-          <input id="residentName" name="residentName" type="text" placeholder="Resident name">
-        </label>
-        <label>Phone
-          <input id="phone" name="phone" type="tel" placeholder="(586) 000-0000">
-        </label>
-        <label>Email
-          <input id="email" name="email" type="email" placeholder="resident@example.com">
-        </label>
-        <label>Household size
-          <input id="householdSize" name="householdSize" type="number" min="1" max="20" placeholder="3">
-        </label>
-        <label class="wide">Street address
-          <input id="street" name="street" type="text" placeholder="Address in Macomb County">
-        </label>
-        <label>Area or community
-          <input id="city" name="city" type="text" placeholder="Add/search any area in the GIS panel">
-        </label>
-        <label>ZIP
-          <input id="zip" name="zip" type="text" inputmode="numeric" placeholder="48043">
-        </label>
-        <label>Structure type
-          <select id="structureType" name="structureType">
-            <option>Single-family home</option>
-            <option>Two-to-four family dwelling</option>
-            <option>Condo unit</option>
-            <option>Rental unit</option>
-            <option>Manufactured or mobile home</option>
-            <option>Commercial building</option>
-            <option>Detached garage or shed</option>
-          </select>
-        </label>
-        <label>Foundation or lowest area
-          <select id="foundation" name="foundation">
-            <option>Basement</option>
-            <option>Crawlspace</option>
-            <option>Slab on grade</option>
-            <option>Elevated structure</option>
-            <option>Unknown</option>
-          </select>
-        </label>
-        <label>Flood insurance
-          <select id="floodPolicy" name="floodPolicy">
-            <option>Unknown</option>
-            <option>Yes</option>
-            <option>No</option>
-          </select>
-        </label>
-        <label>Homeowners/renters insurance
-          <select id="homePolicy" name="homePolicy">
-            <option>Unknown</option>
-            <option>Yes</option>
-            <option>No</option>
-          </select>
-        </label>
-        <label>Primary damage source
-          <select id="damageCause" name="damageCause">
-            <option>Surface floodwater or rising water</option>
-            <option>Sewer or drain backup</option>
-            <option>Wind-driven rain through roof/window</option>
-            <option>Plumbing or appliance leak</option>
-            <option>Foundation seepage</option>
-            <option>Unknown or mixed source</option>
-          </select>
-        </label>
-        <label>Approximate water depth
-          <select id="waterDepth" name="waterDepth">
-            <option>Under 1 inch</option>
-            <option>1 to 6 inches</option>
-            <option>6 to 18 inches</option>
-            <option>18 inches to 3 feet</option>
-            <option>Over 3 feet</option>
-          </select>
-        </label>
-      </div>
-      <div class="action-row">
-        <button class="btn primary" type="button" id="saveCaseBtn">Save case</button>
-        <button class="btn ghost" type="button" id="sampleCaseBtn">Load sample</button>
-      </div>
-      <p class="fine-print">Coverage guidance is a decision aid only. Final coverage depends on the policy, endorsements, exclusions, damage cause, adjuster review, and official eligibility rules.</p>
-    </form>
-
-    <section class="tool-panel map-panel" id="gis">
-      <div class="panel-heading row">
-        <div>
-          <p class="eyebrow">Interactive GIS visual</p>
-          <h2>Add any area, then compare rain, elevation, flood, and drain layers</h2>
-        </div>
-        <div class="action-row tight">
-          <button class="btn secondary" type="button" id="refreshDataBtn">Refresh data</button>
-          <button class="btn ghost" type="button" id="locationBtn">Use my location</button>
-        </div>
-      </div>
-
-      <div class="gis-controls">
-        <label class="wide">Search city, address, ZIP, or place
-          <div class="inline-control">
-            <input id="areaSearch" type="search" placeholder="Example: Mount Clemens, MI or 48043">
-            <button class="btn primary" type="button" id="searchAreaBtn">Search</button>
+        <div class="element-fuel-cell-primer" aria-labelledby="fuel-cell-primer-title">
+          <div class="visual-heading">
+            <p class="eyebrow">Fuel cell primer</p>
+            <h2 id="fuel-cell-primer-title">How Hydrogen Becomes Useful Electricity</h2>
+            <p>
+              A fuel cell does not burn hydrogen. It separates hydrogen's protons and electrons, sends the electrons through an outside circuit, and recombines everything with oxygen to make water and heat.
+            </p>
           </div>
-        </label>
-        <div class="search-results" id="areaResults" aria-live="polite"></div>
-        <details class="manual-area">
-          <summary>Add an area by coordinates</summary>
-          <div class="form-grid three compact">
-            <label>Area name
-              <input id="manualAreaName" type="text" placeholder="Neighborhood, street, site name">
-            </label>
-            <label>Latitude
-              <input id="manualLat" type="number" step="0.000001" placeholder="42.5973">
-            </label>
-            <label>Longitude
-              <input id="manualLon" type="number" step="0.000001" placeholder="-82.8780">
-            </label>
-          </div>
-          <button class="btn secondary" type="button" id="manualAreaBtn">Add coordinate area</button>
-        </details>
-      </div>
-
-      <div class="rain-controls">
-        <label>Year
-          <input id="rainYear" type="number" min="1940" max="2100" step="1">
-        </label>
-        <label>Season
-          <select id="rainSeason">
-            <option value="annual">All seasons</option>
-            <option value="winter">Winter</option>
-            <option value="spring">Spring</option>
-            <option value="summer">Summer</option>
-            <option value="fall">Fall</option>
-          </select>
-        </label>
-        <label>Month
-          <select id="rainMonth">
-            <option value="0">All months</option>
-            <option value="1">January</option>
-            <option value="2">February</option>
-            <option value="3">March</option>
-            <option value="4">April</option>
-            <option value="5">May</option>
-            <option value="6">June</option>
-            <option value="7">July</option>
-            <option value="8">August</option>
-            <option value="9">September</option>
-            <option value="10">October</option>
-            <option value="11">November</option>
-            <option value="12">December</option>
-          </select>
-        </label>
-        <label>Day
-          <input id="rainDay" type="date">
-        </label>
-        <button class="btn secondary" type="button" id="loadRainBtn">Load rainfall</button>
-      </div>
-      <div class="layer-panel" aria-label="GIS data layer integrations">
-        <div class="panel-heading row">
-          <div>
-            <p class="eyebrow">Integrated data layers</p>
-            <h3>Rain, elevation, Macomb GIS, FEMA flood maps, and drain maps</h3>
-          </div>
-          <button class="btn ghost" type="button" id="loadLayerDataBtn">Refresh layer checks</button>
-        </div>
-        <div class="layer-toggle-grid" id="gisLayerControls"></div>
-        <div class="layer-source-view" id="gisLayerSource"></div>
-        <div class="layer-status-grid" id="gisLayerStatus"></div>
-      </div>
-      <p class="fine-print" id="gisStatus" aria-live="polite"></p>
-      <p class="fine-print">Location access works best from the local server or a hosted HTTPS site. From a file preview, Use my location opens the local-server page first, then the browser can ask for permission. <a class="inline-link" href="http://localhost:8087/index.html#gis">Open location-enabled preview</a>.</p>
-
-      <div class="gis-visual-grid">
-        <div class="map-stage area-map" aria-label="Interactive area rainfall and elevation map">
-          <iframe id="osmFrame" title="OpenStreetMap area view" loading="lazy"></iframe>
-          <svg viewBox="0 0 760 420" role="img" aria-label="Custom added areas plotted by latitude and longitude">
-            <defs>
-              <linearGradient id="terrain" x1="0" x2="1" y1="0" y2="1">
-                <stop stop-color="#f8f3dd"></stop>
-                <stop offset=".52" stop-color="#e5f0e3"></stop>
-                <stop offset="1" stop-color="#dcebf4"></stop>
-              </linearGradient>
-            </defs>
-            <rect width="760" height="420" fill="url(#terrain)"></rect>
-            <path d="M0 335 C120 286 196 338 313 288 C424 240 490 278 612 211 C682 172 721 150 760 132" fill="none" stroke="#6da6be" stroke-width="8" opacity=".55"></path>
-            <path d="M0 292 C140 258 228 273 324 230 C436 180 558 208 760 88" fill="none" stroke="#8ebd82" stroke-width="3" opacity=".45"></path>
-            <path d="M75 80 H705 M75 145 H705 M75 210 H705 M75 275 H705 M75 340 H705 M145 45 V375 M260 45 V375 M375 45 V375 M490 45 V375 M605 45 V375" stroke="#93a19b" stroke-width="1" opacity=".28"></path>
-            <g id="mapLayerOverlay"></g>
-            <g id="areaMarkers"></g>
-            <text x="26" y="390" class="map-label">Custom areas only. Add an area to plot it here.</text>
-          </svg>
-        </div>
-        <div class="area-side">
-          <div class="risk-summary rain-summary">
-            <div>
-              <span class="risk-score" id="riskScore">--</span>
-              <small>GIS score</small>
+          <div class="primer-layout">
+            <div class="primer-callouts left-callouts">
+              <article>
+                <span>Flow fields</span>
+                <p>Channels guide hydrogen gas to the anode and oxygen from air to the cathode so the reaction happens across the membrane instead of randomly in open space.</p>
+              </article>
+              <article>
+                <span>PEM membrane</span>
+                <p>The polymer electrolyte membrane lets H+ pass through, but blocks electrons. That forced separation is what creates useful electrical current.</p>
+              </article>
             </div>
-            <p id="riskNarrative">Search for an area or add coordinates to start the interactive rainfall and elevation view.</p>
+            <div class="fuel-cell-stack-visual" aria-label="Hydrogen fuel cell stack diagram">
+              <div class="external-wire">
+                <span>Electrical current</span>
+                <i></i>
+              </div>
+              <div class="gas-stream hydrogen-stream">
+                <strong>Hydrogen gas</strong>
+                <b>H2</b><b>H2</b><b>H2</b>
+              </div>
+              <div class="gas-stream oxygen-stream">
+                <strong>Oxidant</strong>
+                <b>O2</b><b>O2</b><b>O2</b>
+              </div>
+              <div class="stack-layers">
+                <span class="stack-plate anode-plate">Anode</span>
+                <span class="stack-plate membrane-plate">PEM</span>
+                <span class="stack-plate cathode-plate">Cathode</span>
+              </div>
+              <div class="particle-field">
+                <span class="particle proton">H+</span>
+                <span class="particle proton">H+</span>
+                <span class="particle electron">e-</span>
+                <span class="particle electron">e-</span>
+                <span class="particle water">H2O</span>
+              </div>
+              <div class="water-output">
+                <strong>Water + heat out</strong>
+                <span>H2O</span>
+              </div>
+            </div>
+            <div class="primer-callouts right-callouts">
+              <article>
+                <span>Anode</span>
+                <p>A catalyst splits hydrogen into protons and electrons: H2 -> 2H+ + 2e-. The protons cross the membrane.</p>
+              </article>
+              <article>
+                <span>Cathode</span>
+                <p>Oxygen, protons, and returning electrons form water: 1/2O2 + 2H+ + 2e- -> H2O. This is why the tailpipe product is mainly water.</p>
+              </article>
+            </div>
           </div>
-          <div class="area-list" id="areaList"></div>
+          <p class="figure-caption">
+            Figure takeaway: hydrogen's clean-use claim comes from electrochemistry, not from the molecule being automatically clean. The fuel cell can make electricity and water at the point of use, but the full climate result still depends on how the hydrogen was produced.
+          </p>
         </div>
-      </div>
 
-      <div class="tool-panel gis-readout" id="gisReadout" aria-live="polite"></div>
-      <div class="rain-card-grid" id="rainCards"></div>
-      <div class="rain-chart" id="rainChart" aria-label="Monthly rainfall chart"></div>
-      <div class="factor-list" id="factorList"></div>
-      <div class="resource-links">
-        <a href="https://open-meteo.com/" target="_blank" rel="noopener">Rain and elevation data</a>
-        <a href="https://gis.macombgov.org/home/layers.html" target="_blank" rel="noopener">Macomb GIS layers</a>
-        <a href="https://msc.fema.gov/portal/search" target="_blank" rel="noopener">FEMA flood maps</a>
-        <a href="https://www.macombgov.org/departments/public-works/public-works-resources/macomb-county-drain-maps" target="_blank" rel="noopener">Drain maps</a>
-      </div>
-    </section>
-  </section>
-
-  <section class="section-band" id="insurance">
-    <div class="section-heading">
-      <div>
-        <p class="eyebrow">Coverage clarity engine</p>
-        <h2>Which insurance responds?</h2>
-      </div>
-      <p>Coverage depends on the cause of damage, where the damage happened, the type of structure, and whether the policy includes the needed coverage.</p>
-    </div>
-    <div class="split-layout">
-      <section class="tool-panel">
-        <div class="coverage-grid">
-          <article class="coverage-card"><strong>Flood insurance</strong><span>Usually for rising surface water, overflow, storm surge, and floodwater entering the building. Basement and contents coverage can be limited.</span></article>
-          <article class="coverage-card"><strong>Regular homeowners/renters</strong><span>Usually for sudden interior water, pipe breaks, roof/window storm intrusion, and covered personal property, subject to policy exclusions.</span></article>
-          <article class="coverage-card"><strong>Sewer backup endorsement</strong><span>Often needed when damage comes through drains or sewer lines instead of direct surface flooding.</span></article>
-          <article class="coverage-card"><strong>Aid or appeal route</strong><span>Used when insurance does not cover the loss, coverage is denied, or the resident needs help while waiting.</span></article>
+        <div class="fact-grid">
+          <article class="fact-card">
+            <span class="card-kicker">Atomic behavior</span>
+            <h3>Simple atom, tricky molecule</h3>
+            <p>
+              Hydrogen has one proton and one electron. As H2, it is colorless, odorless, tiny, and eager to leak through weak points. Its small molecular size also makes material compatibility a major design issue.
+            </p>
+          </article>
+          <article class="fact-card accent-teal">
+            <span class="card-kicker">Liquid hydrogen</span>
+            <h3>Cryogenic, not casual</h3>
+            <p>
+              It only becomes liquid at deeply negative Celsius temperatures, around -253 C at atmospheric pressure. Condensing hydrogen is not itself an explosion, but boil-off gas can form flammable or explosive mixtures with air.
+            </p>
+          </article>
+          <article class="fact-card accent-rust">
+            <span class="card-kicker">Safety frame</span>
+            <h3>Flammable and hard to see</h3>
+            <p>
+              Hydrogen flames can be difficult to see, and a wide range of hydrogen-air mixtures can ignite. Safety is about ventilation, leak detection, compatible materials, pressure relief, and keeping ignition sources away.
+            </p>
+          </article>
+          <article class="fact-card accent-green">
+            <span class="card-kicker">Energy role</span>
+            <h3>Carrier, not primary source</h3>
+            <p>
+              Hydrogen stores energy made somewhere else. In a fuel cell, catalysts help split H2 so electrons can do useful work before recombining with oxygen to make water and heat.
+            </p>
+          </article>
         </div>
-      </section>
-      <section class="tool-panel">
-        <h3>Inside vs outside damage</h3>
-        <div class="table-wrap compact-table">
-          <table>
-            <thead><tr><th>Damage area</th><th>Common path</th><th>Watch point</th></tr></thead>
+
+        <div class="visual-report">
+          <div class="visual-heading">
+            <p class="eyebrow">Visual proof board</p>
+            <h2>What Hydrogen's Properties Prove</h2>
+            <p>
+              The visuals below show why hydrogen is not automatically a clean fuel. It is a light, energy-rich carrier that needs cold, pressure, conversion equipment, and a clean production pathway before it becomes useful.
+            </p>
+          </div>
+          <div class="visual-grid">
+            <article class="visual-card">
+              <span class="card-kicker">Cryogenic evidence</span>
+              <h3>Liquid hydrogen needs extreme cold</h3>
+              <div class="temperature-visual" aria-label="Liquid hydrogen temperature scale">
+                <div class="temp-axis">
+                  <span class="temp-marker cryo">-253 C</span>
+                  <span class="temp-marker room">Room temp</span>
+                </div>
+              </div>
+              <p>
+                This proves why liquid storage is not casual. The danger is not the cold liquid exploding by itself; the danger is boil-off gas warming, mixing with air, and finding an ignition source.
+              </p>
+            </article>
+            <article class="visual-card">
+              <span class="card-kicker">Storage evidence</span>
+              <h3>High energy by mass, low density by volume</h3>
+              <div class="density-visual">
+                <div><span>Energy by mass</span><strong>High</strong><i style="--value: 92%"></i></div>
+                <div><span>Energy by volume as gas</span><strong>Low</strong><i style="--value: 28%"></i></div>
+                <div><span>Storage complexity</span><strong>High</strong><i style="--value: 86%"></i></div>
+              </div>
+              <p>
+                This is the core design tradeoff. Hydrogen can carry a lot of energy per kilogram, but a city must spend money and energy to compress, liquefy, or chemically carry enough of it.
+              </p>
+            </article>
+            <article class="visual-card wide">
+              <span class="card-kicker">Energy transfer evidence</span>
+              <h3>How much original energy becomes hydrogen energy?</h3>
+              <div class="energy-bars" aria-label="Energy kept by hydrogen production type">
+                <div class="energy-bar" style="--value: 63%; --bar: var(--green)"><span>Green</span><div class="track"><i></i></div><strong>~61-65%</strong></div>
+                <div class="energy-bar" style="--value: 70%; --bar: var(--grey)"><span>Grey</span><div class="track"><i></i></div><strong>~65-75%</strong></div>
+                <div class="energy-bar" style="--value: 62%; --bar: var(--blue)"><span>Blue</span><div class="track"><i></i></div><strong>~55-70%</strong></div>
+                <div class="energy-bar" style="--value: 52%; --bar: var(--brown)"><span>Brown</span><div class="track"><i></i></div><strong>~45-60%</strong></div>
+              </div>
+              <p>
+                Grey can look efficient and cheap because the fossil supply chain already exists. Green has the strongest environmental case, but it spends clean electricity, so it should be aimed at uses where direct electrification is not enough.
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <div class="science-layer">
+          <div class="science-heading">
+            <p class="eyebrow">Science layer</p>
+            <h2>The Actual Chemistry Behind the Hydrogen Claim</h2>
+            <p>
+              Hydrogen is useful because chemical energy can be stored in the H-H bond and later released without carbon dioxide at the point of use. The difficult part is that pure H2 is not usually found ready to use, so another energy source must first separate hydrogen from water, methane, or coal-derived gases.
+            </p>
+          </div>
+          <div class="science-grid">
+            <article class="science-card">
+              <span class="card-kicker">Molecular science</span>
+              <h3>What H2 actually is</h3>
+              <p class="equation">H + H -> H2</p>
+              <p>
+                Two hydrogen atoms share electrons to form a stable H2 molecule. That bond stores chemical energy. When H2 reacts with oxygen in a fuel cell or flame, the atoms move into a lower-energy product, water, and the energy difference can become electricity, heat, or motion.
+              </p>
+            </article>
+            <article class="science-card">
+              <span class="card-kicker">Green pathway</span>
+              <h3>Electrolysis splits water</h3>
+              <p class="equation">2H2O + electricity -> 2H2 + O2</p>
+              <p>
+                Electrolysis forces water molecules apart. The electricity is not just a trigger; it becomes stored chemical energy in the hydrogen. Losses happen because real electrolysers have electrical resistance, heat, pumps, membranes, gas drying, and pressure requirements.
+              </p>
+            </article>
+            <article class="science-card">
+              <span class="card-kicker">Grey and blue pathway</span>
+              <h3>Steam reforming rearranges methane</h3>
+              <p class="equation">CH4 + H2O -> CO + 3H2</p>
+              <p class="equation">CO + H2O -> CO2 + H2</p>
+              <p>
+                Natural gas reforming does not create hydrogen from nothing. It moves hydrogen atoms from methane and steam into H2 while the carbon becomes CO2. Blue hydrogen adds carbon capture, but the science only helps the climate if methane leakage is low and captured CO2 stays stored.
+              </p>
+            </article>
+            <article class="science-card">
+              <span class="card-kicker">Brown pathway</span>
+              <h3>Coal gasification makes syngas first</h3>
+              <p class="equation">C + H2O -> CO + H2</p>
+              <p>
+                Coal does not contain clean hydrogen waiting to be released. It must be gasified into a mixture of carbon monoxide and hydrogen, then shifted and purified. That chain uses heat, oxygen, cleanup systems, and separation equipment, which is why brown hydrogen has poor environmental value.
+              </p>
+            </article>
+          </div>
+          <div class="science-explain" aria-label="Scientific evidence for hydrogen properties">
+            <article>
+              <h3>Molecular constants set the storage problem</h3>
+              <p class="metric-line"><strong>2.016 g/mol</strong><span>molecular mass of H2</span></p>
+              <p class="metric-line"><strong>0.0838 kg/m3</strong><span>gas density at normal conditions</span></p>
+              <p>
+                Hydrogen is light because each molecule has only two protons and two electrons. That gives it high energy per kilogram, but very low energy per litre as a gas. A kilogram of hydrogen contains useful chemical energy, yet at normal pressure it takes up about 12 cubic metres, so storage immediately becomes a pressure, temperature, and materials problem.
+              </p>
+            </article>
+            <article>
+              <h3>Energy content is measurable, not symbolic</h3>
+              <p class="equation">1 kg H2 = about 33.3 kWh LHV</p>
+              <p>
+                The lower heating value counts the usable energy when the water produced remains vapor. That number is why hydrogen attracts attention: one kilogram stores about as much chemical energy as one gasoline-gallon-equivalent. The catch is that the energy must first be put into H2 by electrolysis, reforming, or gasification, and each route loses part of the original input.
+              </p>
+            </article>
+            <article>
+              <h3>Electrolysis has a thermodynamic floor</h3>
+              <p class="equation">Delta G = nFE; Erev about 1.23 V; Vtn about 1.48 V</p>
+              <p>
+                Water splitting is not just "electricity touches water." The minimum reversible voltage is set by Gibbs free energy, and the thermoneutral voltage includes the heat of reaction. Real electrolysers run above the ideal voltage because of activation losses at catalysts, ohmic resistance in membranes, gas bubbles, pumps, drying, and controls. That is why stored H2 energy is always less than the electricity supplied.
+              </p>
+            </article>
+            <article>
+              <h3>Flammability depends on mixture and ignition</h3>
+              <p class="equation">flammable in air: about 4% to 75% H2 by volume</p>
+              <p>
+                Liquid hydrogen is difficult because its normal boiling point is about -253 C. The liquid itself is a cryogenic storage state; the combustion danger appears when hydrogen escapes, warms, mixes with air inside its flammable range, and reaches an ignition source. Safety design is therefore based on ventilation, leak detection, pressure relief, compatible materials, and preventing enclosed accumulation.
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <div class="narrative-block">
+          <div class="narrative-heading">
+            <p class="eyebrow">Narrative behind the facts</p>
+            <h2>Why Hydrogen Is Powerful, Useful, and Awkward at the Same Time</h2>
+          </div>
+          <article class="narrative-entry">
+            <h3>The story begins with size</h3>
+            <p>
+              Hydrogen looks simple because the atom is simple: one proton, one electron, and very little mass. That simplicity is the reason hydrogen can carry a lot of energy per kilogram, but it is also the reason it is so difficult to use. The H2 molecule is small enough to escape through tiny openings that would hold larger fuels more easily. A city cannot treat hydrogen like gasoline, diesel, or natural gas without redesigning seals, valves, sensors, ventilation, and pressure systems. The promise and the problem come from the same physical fact: hydrogen is extremely light.
+            </p>
+          </article>
+          <article class="narrative-entry">
+            <h3>The storage problem is really a density problem</h3>
+            <p>
+              Hydrogen contains a lot of energy by mass, but very little energy by volume as a gas. That means a useful amount of hydrogen takes up too much space unless it is compressed, liquefied, or carried inside another chemical. Compression solves part of the volume problem but requires strong tanks and energy for compressors. Liquefaction makes hydrogen denser, but it requires cooling to about -253 C and keeping it cold. This is why storage is not just a container question. It is an energy, materials, cost, safety, and logistics question.
+            </p>
+          </article>
+          <article class="narrative-entry">
+            <h3>Flammability changes the design culture</h3>
+            <p>
+              Hydrogen is highly flammable across a wide mixture range in air, so the goal is not to pretend it is harmless. The goal is to design systems where leaks are detected quickly, gas cannot accumulate, pressure can be relieved, and ignition sources are controlled. Hydrogen flames can be hard to see, and leaks may rise quickly because the gas is so light. In practice, safe hydrogen systems rely on ventilation, separation distances, hydrogen-rated components, sensors, automatic shutdowns, and clear emergency procedures. The safety story is not that hydrogen cannot be used. It is that it has to be used with infrastructure built for its behavior.
+            </p>
+          </article>
+        </div>
+
+        <div class="split-band">
+          <div>
+            <p class="eyebrow">The condensing question</p>
+            <h3>Why liquid hydrogen feels dangerous</h3>
+            <p>
+              Liquid hydrogen is used where density matters, such as aerospace and some bulk transport. The cold is severe enough to embrittle materials and condense surrounding air if systems are poorly insulated. The main combustion risk comes when hydrogen escapes, warms, mixes with oxygen, and finds an ignition source.
+            </p>
+            <ul class="check-list">
+              <li>Compressed gas avoids cryogenic boil-off but needs strong, expensive vessels.</li>
+              <li>Liquid storage improves volume density but spends a large share of hydrogen's energy on liquefaction.</li>
+              <li>Any city-scale design needs sensors, ventilation, emergency venting, and hydrogen-rated materials.</li>
+            </ul>
+          </div>
+          <figure class="media-panel">
+            <img src="assets/hydrogen-hero.png" alt="Illustrated hydrogen molecule, storage tank, city energy lines, and transit depot">
+            <figcaption>
+              Hydrogen's value comes from storing energy in a light molecule; its challenge comes from needing pressure, cold, compatible materials, and a clean production route before that molecule becomes useful.
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="narrative-block">
+          <div class="narrative-heading">
+            <p class="eyebrow">Production story</p>
+            <h2>The Color Labels Are Really Infrastructure Labels</h2>
+          </div>
+          <article class="narrative-entry">
+            <h3>Green hydrogen starts with electricity</h3>
+            <p>
+              Green hydrogen is the cleanest pathway because its fuel source is renewable electricity, not fossil carbon. The story is not just "water becomes hydrogen." The fuller story is that electricity first has to be generated, delivered to an electrolyser, converted into chemical energy, compressed or stored, and then delivered to a user. Each step spends money and loses energy. Green hydrogen is therefore most valuable when the electricity would otherwise be curtailed, when seasonal storage is needed, or when the final use cannot be electrified directly. Its sustainability is strong, but its energy budget has to be justified.
+            </p>
+          </article>
+          <article class="narrative-entry">
+            <h3>Grey and brown hydrogen show why price can mislead</h3>
+            <p>
+              Grey and brown hydrogen can look attractive because the fuel supply chains already exist. Grey hydrogen uses natural gas, and brown hydrogen uses coal or lignite. Those systems can produce hydrogen at lower direct cost in some regions because the infrastructure, workers, and feedstocks are already in place. The problem is that the cheap price usually leaves out climate damage, upstream methane leakage, coal mining impacts, carbon dioxide emissions, and the cost of eventually replacing the system. They are accessible pathways, but accessibility is not the same as long-term value.
+            </p>
+          </article>
+          <article class="narrative-entry">
+            <h3>Blue hydrogen is a transition argument</h3>
+            <p>
+              Blue hydrogen tries to keep the benefits of existing natural gas reforming while reducing emissions through carbon capture and storage. That makes it a bridge, not a final answer. It can be useful if the carbon capture rate is high, methane leakage is low, carbon dioxide storage is verified, and the project is close to industrial users. If those conditions fail, blue hydrogen can become grey hydrogen with extra cost and better branding. Its real value depends on measurement, not the color label.
+            </p>
+          </article>
+        </div>
+
+        <div class="section-heading compact">
+          <p class="eyebrow">Production tabs</p>
+          <h2>Green, Grey, Blue, and Brown Hydrogen</h2>
+          <p>
+            The hydrogen molecule is the same in every tank. The color label describes how it was produced and how much carbon pollution is tied to that production.
+          </p>
+        </div>
+
+        <div class="type-model" aria-label="Four hydrogen energy type model">
+          <div class="model-heading">
+            <p class="eyebrow">Four-type model</p>
+            <h2>How Each Hydrogen Type Becomes H2</h2>
+            <p>
+              The model follows the same chain for every type: input energy or feedstock, conversion equipment, carbon checkpoint, and final hydrogen output. The molecule is the same, but the pathway changes the price, emissions, and practicality.
+            </p>
+          </div>
+          <div class="type-model-grid">
+            <article class="model-card model-green">
+              <span class="card-kicker">Green</span>
+              <div class="type-image type-image-green" aria-label="Renewable power and water feeding an electrolyser">
+                <span class="type-sun"></span>
+                <span class="type-turbine"><i></i></span>
+                <span class="type-panel"></span>
+                <span class="type-electrolyser">H2</span>
+              </div>
+              <h3>Renewable electricity model</h3>
+              <ol class="model-flow">
+                <li><strong>Input</strong><span>Wind, solar, hydro, or other low-carbon electricity plus water.</span></li>
+                <li><strong>Converter</strong><span>Electrolyser splits H2O into H2 and O2.</span></li>
+                <li><strong>Carbon checkpoint</strong><span>No direct CO2 from the reaction; cleanliness depends on the electricity source.</span></li>
+                <li><strong>Output</strong><span>Cleanest H2, but about 35-39% of input electricity is lost before storage.</span></li>
+              </ol>
+            </article>
+            <article class="model-card model-grey">
+              <span class="card-kicker">Grey</span>
+              <div class="type-image type-image-grey" aria-label="Natural gas reformer producing grey hydrogen">
+                <span class="type-stack"></span>
+                <span class="type-pipe"></span>
+                <span class="type-reformer">CH4</span>
+                <span class="type-smoke"></span>
+              </div>
+              <h3>Natural gas model</h3>
+              <ol class="model-flow">
+                <li><strong>Input</strong><span>Methane-rich natural gas, steam, and process heat.</span></li>
+                <li><strong>Converter</strong><span>Steam methane reformer shifts hydrogen atoms into H2.</span></li>
+                <li><strong>Carbon checkpoint</strong><span>Carbon from methane becomes CO2 and is released.</span></li>
+                <li><strong>Output</strong><span>Usually cheap and easy to implement, but roughly 10-12 kg CO2e can be tied to each kg H2.</span></li>
+              </ol>
+            </article>
+            <article class="model-card model-blue">
+              <span class="card-kicker">Blue</span>
+              <div class="type-image type-image-blue" aria-label="Natural gas reformer with carbon capture and storage">
+                <span class="type-stack"></span>
+                <span class="type-capture">CO2</span>
+                <span class="type-storage-dome"></span>
+                <span class="type-pipe"></span>
+              </div>
+              <h3>Gas plus capture model</h3>
+              <ol class="model-flow">
+                <li><strong>Input</strong><span>Natural gas plus carbon-capture equipment, CO2 compression, transport, and storage.</span></li>
+                <li><strong>Converter</strong><span>Reformer makes H2, then capture systems remove part of the CO2 stream.</span></li>
+                <li><strong>Carbon checkpoint</strong><span>Climate value depends on capture rate, methane leakage, and verified storage.</span></li>
+                <li><strong>Output</strong><span>Lower-carbon than grey only when the whole gas-to-storage chain is measured strictly.</span></li>
+              </ol>
+            </article>
+            <article class="model-card model-brown">
+              <span class="card-kicker">Brown</span>
+              <div class="type-image type-image-brown" aria-label="Coal gasification pathway producing brown hydrogen">
+                <span class="type-coal"></span>
+                <span class="type-gasifier">H2</span>
+                <span class="type-stack"></span>
+                <span class="type-smoke"></span>
+              </div>
+              <h3>Coal gasification model</h3>
+              <ol class="model-flow">
+                <li><strong>Input</strong><span>Coal or lignite reacted with oxygen and steam.</span></li>
+                <li><strong>Converter</strong><span>Gasifier makes syngas, then shift reactors and cleanup separate H2.</span></li>
+                <li><strong>Carbon checkpoint</strong><span>Coal carbon produces the heaviest CO2 burden unless expensive capture is added.</span></li>
+                <li><strong>Output</strong><span>Accessible in coal regions, but the weakest future-ready option environmentally.</span></li>
+              </ol>
+            </article>
+          </div>
+        </div>
+
+        <div class="type-compare-visual" aria-label="Hydrogen type comparison visual">
+          <div class="model-heading">
+            <p class="eyebrow">Comparison visual</p>
+            <h2>Which Hydrogen Type Wins on Each Measure?</h2>
+            <p>
+              This chart turns the color labels into measurable tradeoffs. The strongest pathway is not the one with the lowest sticker price; it is the one with the best mix of cost, emissions, energy kept, and buildability.
+            </p>
+          </div>
+          <div class="type-compare-grid">
+            <article class="type-compare-card green-compare">
+              <span>Green</span>
+              <h3>Best climate case, highest early cost</h3>
+              <div class="compare-bars">
+                <div><strong>Cost</strong><i style="--value: 38%"></i><em>high today</em></div>
+                <div><strong>Low emissions</strong><i style="--value: 88%"></i><em>strong</em></div>
+                <div><strong>Energy kept</strong><i style="--value: 63%"></i><em>~61-65%</em></div>
+                <div><strong>Buildability</strong><i style="--value: 52%"></i><em>medium</em></div>
+              </div>
+            </article>
+            <article class="type-compare-card grey-compare">
+              <span>Grey</span>
+              <h3>Cheapest access, weak climate case</h3>
+              <div class="compare-bars">
+                <div><strong>Cost</strong><i style="--value: 78%"></i><em>cheap</em></div>
+                <div><strong>Low emissions</strong><i style="--value: 22%"></i><em>weak</em></div>
+                <div><strong>Energy kept</strong><i style="--value: 70%"></i><em>~65-75%</em></div>
+                <div><strong>Buildability</strong><i style="--value: 84%"></i><em>easy</em></div>
+              </div>
+            </article>
+            <article class="type-compare-card blue-compare">
+              <span>Blue</span>
+              <h3>Transition case, only if capture works</h3>
+              <div class="compare-bars">
+                <div><strong>Cost</strong><i style="--value: 58%"></i><em>medium</em></div>
+                <div><strong>Low emissions</strong><i style="--value: 55%"></i><em>conditional</em></div>
+                <div><strong>Energy kept</strong><i style="--value: 62%"></i><em>~55-70%</em></div>
+                <div><strong>Buildability</strong><i style="--value: 48%"></i><em>hub-only</em></div>
+              </div>
+            </article>
+            <article class="type-compare-card brown-compare">
+              <span>Brown</span>
+              <h3>Coal access, worst total burden</h3>
+              <div class="compare-bars">
+                <div><strong>Cost</strong><i style="--value: 62%"></i><em>regional</em></div>
+                <div><strong>Low emissions</strong><i style="--value: 14%"></i><em>poor</em></div>
+                <div><strong>Energy kept</strong><i style="--value: 52%"></i><em>~45-60%</em></div>
+                <div><strong>Buildability</strong><i style="--value: 38%"></i><em>hard clean-up</em></div>
+              </div>
+            </article>
+          </div>
+          <p class="figure-caption">
+            Figure takeaway: the molecule is identical in every pathway, so the real comparison is upstream. Green wins on climate value, grey wins on near-term access, blue depends on measured carbon capture, and brown carries the weakest long-term case because coal emissions and cleanup dominate the full cost.
+          </p>
+          <div class="evidence-citations" aria-label="Evidence citations for hydrogen type comparison">
+            <a href="https://www.energy.gov/cmei/fuels/hydrogen-production-pathways">DOE: production pathways and cost targets</a>
+            <a href="https://www.energy.gov/cmei/fuels/technical-targets-proton-exchange-membrane-electrolysis">DOE: PEM electrolysis energy use</a>
+            <a href="https://www.iea.org/reports/global-hydrogen-review-2025/executive-summary">IEA: fossil dominance and low-emissions growth</a>
+            <a href="https://netl.doe.gov/research/carbon-management/energy-systems/gasification/gasifipedia/technologies-hydrogen">NETL: gasification and hydrogen technologies</a>
+          </div>
+        </div>
+
+        <div class="color-tabs" role="tablist" aria-label="Hydrogen production colors">
+          <button class="color-tab green active" type="button" role="tab" aria-selected="true" aria-controls="green-panel" id="green-tab" data-color-tab="green">Green</button>
+          <button class="color-tab grey" type="button" role="tab" aria-selected="false" aria-controls="grey-panel" id="grey-tab" data-color-tab="grey">Grey</button>
+          <button class="color-tab blue" type="button" role="tab" aria-selected="false" aria-controls="blue-panel" id="blue-tab" data-color-tab="blue">Blue</button>
+          <button class="color-tab brown" type="button" role="tab" aria-selected="false" aria-controls="brown-panel" id="brown-tab" data-color-tab="brown">Brown</button>
+        </div>
+
+        <div class="tab-panels">
+          <article class="color-pane active" id="green-panel" role="tabpanel" aria-labelledby="green-tab" data-color-pane="green">
+            <div class="pane-copy">
+              <span class="card-kicker">Renewable electrolysis</span>
+              <h3>Green hydrogen is cleanest, but not always cheapest</h3>
+              <p>
+                Green hydrogen splits water using renewable electricity. It is the best climate pathway when the electricity is truly low-carbon, but electrolysers, clean power, storage, compression, and delivery make it expensive until manufacturing and demand scale up.
+              </p>
+            </div>
+            <div class="score-stack" aria-label="Green hydrogen scores">
+              <div><span>Affordability</span><meter min="0" max="100" value="36"></meter><strong>Low today</strong></div>
+              <div><span>Sustainability</span><meter min="0" max="100" value="88"></meter><strong>Strong</strong></div>
+              <div><span>Implementability</span><meter min="0" max="100" value="52"></meter><strong>Medium</strong></div>
+              <div><span>Energy kept into H2</span><meter min="0" max="100" value="63"></meter><strong>~61-65%</strong></div>
+            </div>
+            <div class="type-details">
+              <article><span>What fuels it</span><p>Renewable electricity plus water. The hydrogen is only as clean as the electricity used to split the water.</p></article>
+              <article><span>Energy transfer to H2</span><p>Current PEM electrolysis is about 51-55 kWh per kg H2 at system level. One kg of H2 stores about 33.3 kWh LHV, so roughly 35-39% is lost before compression, storage, or final use.</p></article>
+              <article><span>Benefits</span><p>Lowest climate impact, excellent fit for surplus solar and wind, useful for seasonal storage, steel, ammonia, ports, and fuel-cell fleets.</p></article>
+              <article><span>Total cost</span><p>Financial cost is high today, environmental cost is low, and total energy expenditure is high enough that it should be saved for uses that direct electrification cannot handle well.</p></article>
+            </div>
+            <p class="pane-story">
+              Process narrative: a green hydrogen project begins as an electricity project. The city first needs renewable power that is available at the right time, then water treatment, an electrolyser, compression, storage, and a final use. If clean power is scarce, using it to make hydrogen can be less sensible than sending that electricity directly to homes, heat pumps, or batteries. Green hydrogen becomes strongest when renewable power would otherwise be wasted, when energy needs to be stored for weeks or months, or when the final use needs a fuel molecule rather than electrons.
+            </p>
+            <p class="verdict-banner green-verdict">Overall: best long-term sustainability and future readiness, but only worth the energy expense when clean power is abundant or the end use is hard to electrify.</p>
+          </article>
+
+          <article class="color-pane" id="grey-panel" role="tabpanel" aria-labelledby="grey-tab" data-color-pane="grey">
+            <div class="pane-copy">
+              <span class="card-kicker">Natural gas without capture</span>
+              <h3>Grey hydrogen is today's common fossil route</h3>
+              <p>
+                Grey hydrogen is usually made by steam methane reforming natural gas without carbon capture. It is widely used because the process is mature and relatively cheap, but it releases carbon dioxide upstream even if the final hydrogen use has no tailpipe emissions.
+              </p>
+            </div>
+            <div class="score-stack" aria-label="Grey hydrogen scores">
+              <div><span>Affordability</span><meter min="0" max="100" value="78"></meter><strong>Strong today</strong></div>
+              <div><span>Sustainability</span><meter min="0" max="100" value="22"></meter><strong>Weak</strong></div>
+              <div><span>Implementability</span><meter min="0" max="100" value="84"></meter><strong>Easy</strong></div>
+              <div><span>Energy kept into H2</span><meter min="0" max="100" value="70"></meter><strong>~65-75%</strong></div>
+            </div>
+            <div class="type-details">
+              <article><span>What fuels it</span><p>Natural gas, mostly methane, plus high-temperature steam and process heat in steam methane reforming.</p></article>
+              <article><span>Energy transfer to H2</span><p>Roughly 65-75% of the fossil feedstock energy becomes hydrogen energy. Around 25-35% is lost as process heat, plant losses, and separation losses before compression, storage, or final use.</p></article>
+              <article><span>Benefits</span><p>Cheapest and most accessible route in many regions, mature technology, large existing supply chain, and easy integration with refineries and chemical plants.</p></article>
+              <article><span>Total cost</span><p>Financial cost is low, but environmental cost is high because CO2 is released and methane leakage can worsen total climate impact.</p></article>
+            </div>
+            <p class="pane-story">
+              Process narrative: grey hydrogen became common because industry already had natural gas pipelines, reformers, skilled operators, and chemical customers that needed hydrogen. That makes it easy to implement and cheap on a plant balance sheet. The hidden problem is that the emissions happen before the hydrogen is used. A fuel-cell bus using grey hydrogen may have clean exhaust at the street, while the reformer releases carbon dioxide elsewhere. Grey hydrogen therefore solves supply and cost, but it does not solve the climate problem.
+            </p>
+            <p class="verdict-banner grey-verdict">Overall: best for short-term access and low sticker price, but weak for sustainability and future infrastructure because it keeps the fossil emissions problem.</p>
+          </article>
+
+          <article class="color-pane" id="blue-panel" role="tabpanel" aria-labelledby="blue-tab" data-color-pane="blue">
+            <div class="pane-copy">
+              <span class="card-kicker">Natural gas plus carbon capture</span>
+              <h3>Blue hydrogen is a bridge with leakage questions</h3>
+              <p>
+                Blue hydrogen uses fossil gas reforming with carbon capture, utilization, and storage. It can lower production emissions compared with unabated fossil hydrogen, but the result depends on methane leakage, capture rates, storage integrity, and whether clean hydrogen demand actually appears.
+              </p>
+            </div>
+            <div class="score-stack" aria-label="Blue hydrogen scores">
+              <div><span>Affordability</span><meter min="0" max="100" value="58"></meter><strong>Medium</strong></div>
+              <div><span>Sustainability</span><meter min="0" max="100" value="55"></meter><strong>Conditional</strong></div>
+              <div><span>Implementability</span><meter min="0" max="100" value="48"></meter><strong>Hub dependent</strong></div>
+              <div><span>Energy kept into H2</span><meter min="0" max="100" value="62"></meter><strong>~55-70%</strong></div>
+            </div>
+            <div class="type-details">
+              <article><span>What fuels it</span><p>Natural gas plus the added equipment, electricity, compression, transport, and storage needed for carbon capture and storage.</p></article>
+              <article><span>Energy transfer to H2</span><p>The reformer can be efficient, but capture and CO2 compression add an energy penalty. A planning range is about 55-70% energy kept and 30-45% lost before storage or final use.</p></article>
+              <article><span>Benefits</span><p>Can cut emissions compared with grey hydrogen, uses familiar reforming equipment, and can scale faster in industrial hubs with CO2 pipelines and geologic storage.</p></article>
+              <article><span>Total cost</span><p>Financial cost is medium to high, environmental value depends on high capture rates and low methane leakage, and total energy expenditure is higher than grey.</p></article>
+            </div>
+            <p class="pane-story">
+              Process narrative: blue hydrogen is an engineering compromise. It keeps the natural gas reformer but adds carbon capture, CO2 compression, pipeline transport, and underground storage. That only works as a serious climate pathway when the whole chain is measured: methane leakage from gas production, capture rate at the plant, energy used by capture equipment, and long-term storage performance. Blue hydrogen can help an industrial region move faster than waiting for green hydrogen alone, but it is credible only when the carbon accounting is strict.
+            </p>
+            <p class="verdict-banner blue-verdict">Overall: useful as a transition option where gas, capture, CO2 storage, and industrial demand are all nearby; risky if it delays green supply or undercounts methane leakage.</p>
+          </article>
+
+          <article class="color-pane" id="brown-panel" role="tabpanel" aria-labelledby="brown-tab" data-color-pane="brown">
+            <div class="pane-copy">
+              <span class="card-kicker">Coal gasification</span>
+              <h3>Brown hydrogen is the cheapest-looking, dirtiest route</h3>
+              <p>
+                Brown hydrogen is usually made from lignite or coal gasification. It can look attractive where coal is cheap and infrastructure already exists, but it has the worst carbon profile and does not solve the climate problem unless paired with expensive capture and storage.
+              </p>
+            </div>
+            <div class="score-stack" aria-label="Brown hydrogen scores">
+              <div><span>Affordability</span><meter min="0" max="100" value="62"></meter><strong>Region dependent</strong></div>
+              <div><span>Sustainability</span><meter min="0" max="100" value="14"></meter><strong>Poor</strong></div>
+              <div><span>Implementability</span><meter min="0" max="100" value="38"></meter><strong>Hard clean-up</strong></div>
+              <div><span>Energy kept into H2</span><meter min="0" max="100" value="52"></meter><strong>~45-60%</strong></div>
+            </div>
+            <div class="type-details">
+              <article><span>What fuels it</span><p>Coal or lignite reacted with oxygen and steam to make syngas, then shifted and purified into hydrogen.</p></article>
+              <article><span>Energy transfer to H2</span><p>Coal gasification is energy intensive. A practical planning range is about 45-60% energy kept as hydrogen and 40-55% lost across gasification, cleanup, shifting, and separation before storage or final use.</p></article>
+              <article><span>Benefits</span><p>It can use abundant coal resources and existing heavy-industry regions, but those benefits mostly apply where coal is cheap and climate costs are ignored.</p></article>
+              <article><span>Total cost</span><p>Financial cost can appear moderate, but environmental cost is the highest. Total energy expenditure is poor when mining, gasification, cleanup, and emissions are counted.</p></article>
+            </div>
+            <p class="pane-story">
+              Process narrative: brown hydrogen is the clearest example of why the word "hydrogen" is not automatically clean. Coal has to be mined, handled, gasified, cleaned, shifted, and separated before hydrogen is available. That chain uses a large amount of energy and produces heavy carbon pollution unless expensive capture is added. Brown hydrogen can make sense only to a system that already values coal access more than climate performance. For future infrastructure, it creates the largest risk of spending money on equipment that a low-carbon city will later need to replace.
+            </p>
+            <p class="verdict-banner brown-verdict">Overall: weakest total case. It is accessible in coal regions, but it has the worst environmental burden and the least future-ready infrastructure value.</p>
+          </article>
+        </div>
+
+        <div class="comparison-table-wrap">
+          <table class="comparison-table">
+            <caption>Financial, environmental, accessibility, and energy-expenditure comparison</caption>
+            <thead>
+              <tr>
+                <th scope="col">Type</th>
+                <th scope="col">Fuel or input</th>
+                <th scope="col">Energy transfer into H2</th>
+                <th scope="col">Financial cost</th>
+                <th scope="col">Environmental cost</th>
+                <th scope="col">Accessibility and implementability</th>
+                <th scope="col">Overall benefit and cost</th>
+              </tr>
+            </thead>
             <tbody>
-              <tr><td><strong>Interior structure</strong></td><td>Flood or regular policy depending on water source.</td><td>Cause matters more than location.</td></tr>
-              <tr><td><strong>Contents</strong></td><td>Contents coverage, renters policy, or aid.</td><td>Basement contents may be limited.</td></tr>
-              <tr><td><strong>Detached garage/shed</strong></td><td>Separate limits or exclusions.</td><td>Structure type can change eligibility.</td></tr>
-              <tr><td><strong>Yard, fences, landscaping</strong></td><td>Often excluded or limited.</td><td>Document anyway for aid or local reporting.</td></tr>
-              <tr><td><strong>Hotel/temporary living</strong></td><td>Usually not NFIP flood coverage.</td><td>May need homeowners ALE, FEMA, local aid, or nonprofit help.</td></tr>
+              <tr>
+                <th scope="row">Green</th>
+                <td>Renewable electricity and water</td>
+                <td>About 51-55 kWh electricity per kg H2 today for PEM systems; about 35-39% lost before compression, storage, or final use.</td>
+                <td>High today, but likely to improve as electrolysers, renewables, and utilization scale.</td>
+                <td>Lowest if powered by additional clean energy; poor if it consumes grid power that still depends on fossil generation.</td>
+                <td>Medium. Needs clean power, electrolyser capacity, water treatment, interconnection, compression, and demand nearby.</td>
+                <td>Best total long-term option for hard-to-electrify uses; wasteful when used where batteries or direct electrification work well.</td>
+              </tr>
+              <tr>
+                <th scope="row">Grey</th>
+                <td>Natural gas, steam, and process heat</td>
+                <td>Roughly 65-75% of feedstock energy becomes H2; about 25-35% is lost before compression, storage, or final use.</td>
+                <td>Usually the cheapest route because the technology and gas supply chain are mature.</td>
+                <td>High. CO2 is released and methane leakage can raise total climate impact.</td>
+                <td>High. Existing refineries, chemical plants, gas lines, and reformers make it easy to deploy.</td>
+                <td>Strong short-term access, weak future value. It solves price and availability but not sustainability.</td>
+              </tr>
+              <tr>
+                <th scope="row">Blue</th>
+                <td>Natural gas plus carbon capture, CO2 compression, transport, and storage</td>
+                <td>Roughly 55-70% kept as H2 after capture penalties; about 30-45% lost before storage or final use.</td>
+                <td>Medium to high. Cheaper than green in some gas-rich regions, but more expensive than grey.</td>
+                <td>Conditional. Better than grey only when capture rates are high, methane leakage is low, and CO2 stays stored.</td>
+                <td>Medium to low. Works best in industrial hubs with nearby CO2 pipelines and geologic storage.</td>
+                <td>Useful bridge in the right geography; poor choice if it locks in fossil gas without strict carbon accounting.</td>
+              </tr>
+              <tr>
+                <th scope="row">Brown</th>
+                <td>Coal or lignite with oxygen and steam</td>
+                <td>Roughly 45-60% kept as H2; about 40-55% lost through gasification, cleanup, shift, and separation.</td>
+                <td>Moderate only where coal is cheap and emissions are not priced; capital equipment can be expensive.</td>
+                <td>Highest. Coal mining, gasification, and CO2 release create the heaviest environmental burden.</td>
+                <td>Medium in coal regions, low as a clean pathway because gasifiers, cleanup, ash handling, and capture are complex.</td>
+                <td>Lowest total benefit once environmental damage and energy waste are counted.</td>
+              </tr>
             </tbody>
           </table>
         </div>
-      </section>
-    </div>
-  </section>
 
-  <section class="section-band" id="visuals">
-    <div class="section-heading">
-      <div>
-        <p class="eyebrow">Step 2</p>
-        <h2>Visual intake and smart review</h2>
-      </div>
-      <p>Upload photos, videos, or receipts. The platform creates suggested claim items, asks for verification, then adds verified items to the inventory.</p>
-    </div>
-    <div class="split-layout">
-      <section class="tool-panel">
-        <label class="upload-zone" for="visualUpload">
-          <span>Drop or select photos, videos, receipts, and damage visuals</span>
-          <input id="visualUpload" type="file" accept="image/*,video/*,.pdf,.txt,.csv" multiple>
-        </label>
-        <div class="action-row">
-          <button class="btn primary" type="button" id="analyzeBtn">Analyze visuals</button>
-          <button class="btn ghost" type="button" id="sampleVisualBtn">Add sample visuals</button>
-        </div>
-        <div class="file-grid" id="uploadPreview" aria-live="polite"></div>
-      </section>
-
-      <section class="tool-panel">
-        <div class="panel-heading row">
-          <div>
-            <p class="eyebrow">Verification required</p>
-            <h3>Pending suggestions</h3>
+        <div class="price-toggle-section">
+          <div class="section-heading compact">
+            <p class="eyebrow">Price examples</p>
+            <h2>Three Place-Based Price Examples for Each Hydrogen Type</h2>
+            <p>
+              These are production-price examples in USD per kg H2. They are not retail pump prices, because compression, storage, delivery, station operation, and taxes can raise the final user price.
+            </p>
           </div>
-          <span class="status-pill" id="pendingCount">0 pending</span>
-        </div>
-        <div class="suggestion-list" id="pendingList"></div>
-      </section>
-    </div>
-  </section>
-
-  <section class="section-band" id="inventory">
-    <div class="section-heading">
-      <div>
-        <p class="eyebrow">Step 3</p>
-        <h2>Verified damage inventory</h2>
-      </div>
-      <button class="btn secondary" type="button" id="manualItemBtn">Add manual item</button>
-    </div>
-    <div class="table-wrap inventory-table">
-      <table>
-        <thead>
-          <tr>
-            <th>Item or area</th>
-            <th>Damage type</th>
-            <th>Location</th>
-            <th>Coverage route</th>
-            <th>Receipt or price</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody id="inventoryRows">
-          <tr><td colspan="6" class="empty-cell">No verified items yet. Upload visuals or add a manual item.</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <section class="section-band" id="assistance">
-    <div class="section-heading">
-      <div>
-        <p class="eyebrow">Step 4</p>
-        <h2>Assistance needs</h2>
-      </div>
-      <p>Track non-insurance support for utilities, childcare, housing, food, hotels, repairs, and rebuilding.</p>
-    </div>
-    <div class="split-layout">
-      <section class="tool-panel">
-        <div class="check-grid" id="assistanceChecks">
-          <label><input type="checkbox" value="electricity"> Electricity shutoff or bill help</label>
-          <label><input type="checkbox" value="heat"> Heat or HVAC loss</label>
-          <label><input type="checkbox" value="water"> Water, sewer, or plumbing help</label>
-          <label><input type="checkbox" value="daycare"> Daycare or school disruption</label>
-          <label><input type="checkbox" value="housing"> Housing or rent/mortgage support</label>
-          <label><input type="checkbox" value="hotel"> Hotel or temporary lodging fees</label>
-          <label><input type="checkbox" value="repairs"> Home repairs or cleanup</label>
-          <label><input type="checkbox" value="food"> Food replacement</label>
-          <label><input type="checkbox" value="building"> Building permits, elevation, or mitigation</label>
-        </div>
-      </section>
-      <section class="tool-panel">
-        <div class="panel-heading row">
-          <div>
-            <p class="eyebrow">Referral builder</p>
-            <h3>Suggested next contacts</h3>
+          <p class="price-method">
+            Basis: green examples use about 54 kWh of electricity per kg H2, then add electrolyser capital and operation. Fossil examples are anchored to published plant-gate cost cases: natural-gas reforming is lowest, natural gas with carbon capture is higher, and coal gasification is usually not low-cost once cleanup and carbon risk are counted.
+          </p>
+          <div class="price-toggle-tabs" role="tablist" aria-label="Place price examples by hydrogen type">
+            <button class="price-toggle active green" type="button" role="tab" aria-selected="true" aria-controls="green-price-panel" id="green-price-tab" data-price-tab="green">Green</button>
+            <button class="price-toggle grey" type="button" role="tab" aria-selected="false" aria-controls="grey-price-panel" id="grey-price-tab" data-price-tab="grey">Grey</button>
+            <button class="price-toggle blue" type="button" role="tab" aria-selected="false" aria-controls="blue-price-panel" id="blue-price-tab" data-price-tab="blue">Blue</button>
+            <button class="price-toggle brown" type="button" role="tab" aria-selected="false" aria-controls="brown-price-panel" id="brown-price-tab" data-price-tab="brown">Brown</button>
           </div>
-          <a class="btn ghost" href="https://www.macombgov.org/departments/macomb-community-action/emergency-services" target="_blank" rel="noopener">MCA services</a>
+          <div class="price-toggle-panels">
+            <article class="price-pane active" id="green-price-panel" role="tabpanel" aria-labelledby="green-price-tab" data-price-pane="green">
+              <div class="price-place-grid">
+                <article class="price-place">
+                  <span>Phoenix, Arizona</span>
+                  <strong>$4-$6/kg</strong>
+                  <p>Solar power can make the electricity portion cheap: 54 kWh/kg at 3 cents/kWh is about $1.62 before electrolyser capital, water treatment, and operation.</p>
+                </article>
+                <article class="price-place">
+                  <span>Montreal, Quebec</span>
+                  <strong>$4.5-$6.5/kg</strong>
+                  <p>Low-carbon hydro can support cleaner hydrogen, but the price still depends on electrolyser utilization and whether clean power is available without displacing direct electrification.</p>
+                </article>
+                <article class="price-place">
+                  <span>Rotterdam, Netherlands</span>
+                  <strong>$6-$9/kg</strong>
+                  <p>Offshore wind and port demand help, but European power costs, land, permitting, and import-terminal infrastructure push the production price higher.</p>
+                </article>
+              </div>
+            </article>
+            <article class="price-pane" id="grey-price-panel" role="tabpanel" aria-labelledby="grey-price-tab" data-price-pane="grey">
+              <div class="price-place-grid">
+                <article class="price-place">
+                  <span>Houston, Texas</span>
+                  <strong>$1.1-$1.8/kg</strong>
+                  <p>Natural gas reforming is cheap here because refineries, gas pipelines, hydrogen users, and chemical plants are already clustered.</p>
+                </article>
+                <article class="price-place">
+                  <span>Edmonton, Alberta</span>
+                  <strong>$1.3-$2.2/kg</strong>
+                  <p>Gas supply and industrial demand make grey hydrogen easy to produce, but the low price excludes the climate cost of uncaptured CO2.</p>
+                </article>
+                <article class="price-place">
+                  <span>Jurong, Singapore</span>
+                  <strong>$2-$3/kg</strong>
+                  <p>Refining and petrochemical demand help implementation, while imported gas exposure can raise the production price compared with gas-rich regions.</p>
+                </article>
+              </div>
+            </article>
+            <article class="price-pane" id="blue-price-panel" role="tabpanel" aria-labelledby="blue-price-tab" data-price-pane="blue">
+              <div class="price-place-grid">
+                <article class="price-place">
+                  <span>Houston, Texas</span>
+                  <strong>$1.5-$2.5/kg</strong>
+                  <p>Gas is available and CO2 storage is plausible, so the added cost mainly comes from capture equipment, CO2 compression, and storage verification.</p>
+                </article>
+                <article class="price-place">
+                  <span>Edmonton, Alberta</span>
+                  <strong>$1.6-$2.8/kg</strong>
+                  <p>Industrial hydrogen demand and carbon-storage planning make blue hydrogen more practical than in cities without gas or geologic storage.</p>
+                </article>
+                <article class="price-place">
+                  <span>Rotterdam, Netherlands</span>
+                  <strong>$2.5-$4.5/kg</strong>
+                  <p>Port-scale demand helps, but European gas costs, CO2 transport, permitting, and North Sea storage liability can raise the price.</p>
+                </article>
+              </div>
+            </article>
+            <article class="price-pane" id="brown-price-panel" role="tabpanel" aria-labelledby="brown-price-tab" data-price-pane="brown">
+              <div class="price-place-grid">
+                <article class="price-place">
+                  <span>Ordos, Inner Mongolia</span>
+                  <strong>$2-$3/kg</strong>
+                  <p>Coal access and heavy industry can make coal gasification appear affordable, but the price does not include the full emissions burden.</p>
+                </article>
+                <article class="price-place">
+                  <span>Dhanbad/Jamshedpur, India</span>
+                  <strong>$2.5-$4/kg</strong>
+                  <p>Coal supply and industrial demand exist, but cleanup, ash handling, water use, and air-quality pressure raise the real project cost.</p>
+                </article>
+                <article class="price-place">
+                  <span>Sasolburg, South Africa</span>
+                  <strong>$2.5-$4.5/kg</strong>
+                  <p>Coal-to-chemicals experience helps implementation, but carbon risk and cleanup costs weaken the long-term financial case.</p>
+                </article>
+              </div>
+            </article>
+          </div>
         </div>
-        <div class="assistance-plan" id="assistancePlan"></div>
+
+        <div class="full-report">
+          <div class="report-heading">
+            <p class="eyebrow">Full report</p>
+            <h2>Hydrogen as an Element, Fuel Type, and Energy Carrier</h2>
+          </div>
+          <article class="report-entry">
+            <h3>What properties make hydrogen useful and difficult?</h3>
+            <p>
+              Hydrogen is useful because it stores a large amount of energy by mass and can be converted into electricity inside a fuel cell without producing carbon dioxide at the point of use. That makes it attractive for vehicles, industry, backup power, and long-duration storage. However, hydrogen is also difficult because it is the smallest molecule, leaks easily, has low energy density by volume, and usually has to be compressed, liquefied, or chemically carried before it becomes practical. Its usefulness comes from the same properties that make it expensive: it is light, energetic, mobile, and hard to contain.
+            </p>
+          </article>
+          <article class="report-entry">
+            <h3>Why does liquid hydrogen raise safety and energy concerns?</h3>
+            <p>
+              Hydrogen becomes liquid only at extremely cold temperatures, around -253 C at atmospheric pressure. Reaching that state requires specialized cryogenic equipment and a major energy input, which can consume a large share of the hydrogen's stored energy. Liquid hydrogen is not explosive simply because it is cold, but any hydrogen that boils off, warms, leaks, and mixes with air can become flammable. A safe system therefore depends on insulation, ventilation, sensors, pressure relief, materials that tolerate cryogenic conditions, and designs that prevent hydrogen from collecting in enclosed spaces.
+            </p>
+          </article>
+          <article class="report-entry">
+            <h3>What fuels green, grey, blue, and brown hydrogen?</h3>
+            <p>
+              Green hydrogen is fueled by renewable electricity and water, using electrolysis to split water into hydrogen and oxygen. Grey hydrogen is fueled by natural gas, usually through steam methane reforming without carbon capture. Blue hydrogen also uses natural gas, but adds carbon capture, carbon dioxide compression, transport, and storage. Brown hydrogen is fueled by coal or lignite through gasification. The molecule produced is still H2 in every case, but the upstream fuel source determines the financial cost, environmental damage, infrastructure requirements, and long-term value.
+            </p>
+          </article>
+          <article class="report-entry">
+            <h3>How much energy is lost as input energy becomes useful hydrogen energy?</h3>
+            <p>
+              Hydrogen is not an energy source in the same way sunlight, wind, natural gas, or coal are energy sources. It is an energy carrier that must be made from another energy input. Here, transfer means the energy pathway from the original input into stored hydrogen and then into final use, not simply moving hydrogen between places. Green hydrogen often keeps about 61-65% of the input electricity as hydrogen energy before compression or liquefaction. Grey hydrogen can keep roughly 65-75% of the fossil feedstock energy, but it releases carbon dioxide. Blue hydrogen keeps less because carbon capture adds energy penalties. Brown hydrogen is generally the weakest because coal gasification, cleanup, shifting, and separation can lose a large share of the original energy while producing high emissions.
+            </p>
+          </article>
+          <article class="report-entry">
+            <h3>Which type has the best overall benefit?</h3>
+            <p>
+              Green hydrogen has the strongest long-term environmental value, but it is expensive and energy-intensive, so it should be used where direct electrification is difficult. Grey hydrogen is accessible and relatively cheap, but it fails the sustainability test because emissions are uncaptured. Blue hydrogen can be useful as a transition option if methane leakage is low, carbon capture is high, and carbon dioxide storage is verified. Brown hydrogen has the weakest total case because its apparent cost advantage depends on ignoring high environmental damage. Overall, hydrogen is most beneficial when the production pathway is low-carbon and the end use truly needs hydrogen's storage, range, heat, or chemical advantages.
+            </p>
+          </article>
+        </div>
       </section>
-    </div>
-  </section>
-
-  <section class="section-band" id="housing">
-    <div class="section-heading">
-      <div>
-        <p class="eyebrow">Temporary housing</p>
-        <h2>Where can someone live during the gap?</h2>
-      </div>
-      <p>Flood recovery often includes days or weeks before insurance, reimbursement, or repairs catch up.</p>
-    </div>
-    <div class="grid three">
-      <article class="resource-card action-card"><strong>Immediate shelter</strong><span>Use for unsafe homes, no heat, no power, contamination, blocked access, or evacuation.</span><a href="https://www.macombgov.org/departments/emergency-management" target="_blank" rel="noopener">Macomb Emergency Management</a></article>
-      <article class="resource-card action-card"><strong>Hotel and lodging costs</strong><span>Track nightly rate, taxes, dates, reason for displacement, and whether the policy has additional living expense coverage.</span><a href="#packet">Add to packet</a></article>
-      <article class="resource-card action-card"><strong>Rent or mortgage pressure</strong><span>Keep lease, mortgage, income, hotel, repair, and displacement records together for aid screening.</span><a href="https://www.macombgov.org/departments/macomb-community-action/emergency-services" target="_blank" rel="noopener">Emergency services</a></article>
-    </div>
-  </section>
-
-  <section class="section-band" id="building-policy">
-    <div class="section-heading">
-      <div>
-        <p class="eyebrow">Building and policy</p>
-        <h2>Repair, rebuild, and counteract future flooding</h2>
-      </div>
-      <p>This section now opens a dedicated help page for cleanup, permits, substantial damage review, resilience upgrades, and repair documentation.</p>
-    </div>
-    <div class="split-layout">
-      <section class="tool-panel">
-        <div class="steps">
-          <div class="step"><div><h3>Immediate fixes</h3><p>Water extraction, electrical inspection, HVAC checks, mold prevention, debris removal, and safe access documentation.</p></div></div>
-          <div class="step"><div><h3>Rebuild requirements</h3><p>Permits, inspections, substantial damage review, elevation certificates, contractor estimates, and code-triggered repairs.</p></div></div>
-          <div class="step"><div><h3>Resilience upgrades</h3><p>Backflow valves, sump backup, raised utilities, flood-resistant materials, grading, drainage improvements, and protected mechanical systems.</p></div></div>
+<section class="sources" aria-labelledby="sources-title">
+        <div class="section-heading compact">
+          <p class="eyebrow">Sources</p>
+          <h2 id="sources-title">Research Anchors</h2>
+          <p>These are not decorative links. Each card explains which claim the references support, so the report's numbers and conclusions can be traced back to evidence.</p>
         </div>
-        <div class="hero-actions">
-          <a class="btn primary" href="building-repairs.html">Open building repair page</a>
-          <a class="btn secondary" href="resilient-home.html">Flood-proof home guide</a>
+        <div class="source-map" aria-label="Source evidence map">
+          <article class="source-card">
+            <span>Hydrogen basics</span>
+            <h3>Hydrogen is an energy carrier, not a primary source.</h3>
+            <p>DOE explains that hydrogen stores, moves, and delivers energy made from other sources, and that today's common pathways include natural gas reforming and electrolysis.</p>
+            <a href="https://www.energy.gov/cmei/fuels/hydrogen-fuel-basics">DOE hydrogen fuel basics</a>
+          </article>
+          <article class="source-card">
+            <span>Production efficiency</span>
+            <h3>Electrolysis loses energy before storage begins.</h3>
+            <p>DOE's PEM electrolysis target table lists system energy use around 55 kWh per kg H2 at 2022 status, compared with hydrogen's lower-heating-value energy of about 33.3 kWh per kg.</p>
+            <a href="https://www.energy.gov/cmei/fuels/technical-targets-proton-exchange-membrane-electrolysis">DOE PEM electrolysis targets</a>
+          </article>
+          <article class="source-card">
+            <span>Storage physics</span>
+            <h3>Low volume density drives pressure and cryogenic design.</h3>
+            <p>DOE storage data supports the site's explanation that compressed tanks, 350-700 bar storage, and liquid hydrogen near -252.8 C are engineering choices caused by hydrogen's low density.</p>
+            <a href="https://www.energy.gov/cmei/fuels/hydrogen-storage">DOE hydrogen storage</a>
+          </article>
+          <article class="source-card">
+            <span>Market reality</span>
+            <h3>Low-emissions hydrogen is growing, but still small.</h3>
+            <p>IEA's 2025 review supports the report's cautious tone: hydrogen demand is large, but low-emissions supply remains a small share and cost, demand, and infrastructure are still barriers.</p>
+            <a href="https://www.iea.org/reports/global-hydrogen-review-2025/executive-summary">IEA Global Hydrogen Review 2025</a>
+          </article>
+        </div>
+        <div class="source-list">
+          <a href="https://www.iea.org/reports/global-hydrogen-review-2025/executive-summary">IEA Global Hydrogen Review 2025</a>
+          <a href="https://www.iea.org/reports/global-hydrogen-review-2025/trade-and-infrastructure">IEA hydrogen trade and infrastructure</a>
+          <a href="https://www.iea.org/energy-system/low-emission-fuels/hydrogen">IEA hydrogen infrastructure overview</a>
+          <a href="https://www.energy.gov/eere/fuelcells/hydrogen-delivery">DOE hydrogen delivery</a>
+          <a href="https://www.hydrogen.energy.gov/program-areas/delivery">DOE Hydrogen Program delivery</a>
+          <a href="https://www.hydrogen.energy.gov/program-areas/systems-analysis/h2a-analysis/h2a-delivery">DOE H2A delivery analysis</a>
+          <a href="https://www.energy.gov/cmei/fuels/hydrogen-production-pathways">DOE hydrogen production pathways</a>
+          <a href="https://www.energy.gov/eere/fuelcells/hydrogen-production-natural-gas-reforming">DOE natural gas reforming</a>
+          <a href="https://www.energy.gov/cmei/fuels/technical-targets-proton-exchange-membrane-electrolysis">DOE PEM electrolysis targets</a>
+          <a href="https://www.energy.gov/cmei/fuels/physical-hydrogen-storage">DOE physical hydrogen storage</a>
+          <a href="https://www.eia.gov/energyexplained/hydrogen/production-of-hydrogen.php">EIA hydrogen production overview</a>
+          <a href="https://afdc.energy.gov/vehicles/fuel-cell">DOE AFDC fuel cell electric vehicles</a>
+          <a href="https://www.energy.gov/cmei/fuels/fuel-cell-basics">DOE fuel cell basics</a>
+          <a href="https://www.toyota.com/mirai/">Toyota Mirai current model</a>
+          <a href="https://automobiles.honda.com/future-cars/cr-v-fcev">Honda CR-V e:FCEV</a>
+          <a href="https://www.hyundai.com/worldwide/en/newsroom/detail/hyundai-motor%E2%80%99s-all-new-nexo-sets-new-standards-in-hydrogen-technology-and-electrified-mobility-0000001056">Hyundai all-new NEXO</a>
+          <a href="https://www.edmonton.ca/projects_plans/transit/electric-buses">City of Edmonton hydrogen bus pilot</a>
+          <a href="https://www.mississauga.ca/city-of-mississauga-news/news/zero-emission-transit-mississauga-launches-innovative-hydrogen-powered-bus-initiative/">Mississauga hydrogen bus initiative</a>
+          <a href="https://www.mississauga.ca/projects-and-strategies/city-projects/engaging-a-hydrogen-ecosystem/">Mississauga hydrogen ecosystem</a>
+          <a href="https://global.toyota/en/newsroom/corporate/43347785.html">Toyota Woven City official launch</a>
+          <a href="https://global.toyota/en/newsroom/corporate/35298631.html">Toyota and ENEOS Woven City hydrogen plan</a>
+          <a href="https://global.toyota/en/newsroom/corporate/37405994.html">Toyota portable hydrogen cartridges</a>
+          <a href="https://www.aps.anl.gov/Safety-and-Training/Safety/Reference-Material/Summary-of-Hydrogen-Use-Requirements">Argonne hydrogen safety requirements</a>
+          <a href="https://www.aps.org/apsnews/2019/09/grove-letter-faraday-fuel-cell">American Physical Society fuel cell history</a>
+          <a href="https://www.nasa.gov/technology/tech-transfer-spinoffs/tech-today-nasas-moonshot-launched-commercial-fuel-cell-industry/">NASA fuel cell commercialization history</a>
+          <a href="https://www.nationalgrid.com/stories/energy-explained/hydrogen-colour-spectrum">National Grid hydrogen color spectrum</a>
+          <a href="https://netl.doe.gov/research/carbon-management/energy-systems/gasification/gasifipedia/technologies-hydrogen">NETL hydrogen production technologies</a>
+          <a href="https://www.h2tools.org/hyarc/hydrogen-data/comparative-properties-hydrogen-and-other-fuels">H2Tools comparative properties</a>
+          <a href="https://h2tools.org/hyarc/hydrogen-data/lower-and-higher-heating-values-hydrogen-and-other-fuels">H2Tools hydrogen heating values</a>
+          <a href="https://hydrogen.wsu.edu/2020/10/06/could-smaller-hydrogen-liquefiers-be-better/">Washington State HYPER Lab liquefaction note</a>
+          <a href="https://www.hydrogen.energy.gov/program-areas/systems-analysis/energy-storage-analysis">DOE hydrogen energy storage analysis</a>
         </div>
       </section>
-      <section class="tool-panel">
-        <h3>Where current policy can fail</h3>
-        <div class="policy-list">
-          <p><strong>Maps can lag reality:</strong> regulatory flood maps may not fully show intense rainfall, sewer backup, or fast-changing urban drainage.</p>
-          <p><strong>Minimum codes are not enough:</strong> legal compliance can still leave basements, utilities, and contents vulnerable.</p>
-          <p><strong>Homes need layered protection:</strong> elevation, drainage, materials, utility placement, and stormwater capacity must work together.</p>
-          <p><strong>Implementation idea:</strong> require clearer homeowner risk explanations, better public drainage data, freeboard guidance, and retrofit incentives for repeat-loss areas.</p>
-        </div>
-        <div class="hero-actions">
-          <a class="btn ghost" href="laws-codes.html">Read laws and code gaps</a>
-        </div>
-      </section>
-    </div>
-  </section>
+    </main>
 
-  <section class="section-band" id="community">
-    <div class="section-heading">
-      <div>
-        <p class="eyebrow">Community response</p>
-        <h2>Request help, offer help, and report patterns</h2>
-      </div>
-      <p>Flooding is a neighborhood problem as much as an individual claim problem.</p>
-    </div>
-    <div class="grid three">
-      <article class="info-card green"><h3>Request help</h3><p>Cleanup, food delivery, transportation, childcare, supplies, accessibility support, or help moving damaged items.</p></article>
-      <article class="info-card blue"><h3>Offer help</h3><p>Volunteer time, tools, pumps, dehumidifiers, meals, temporary storage, translation, rides, or documentation support.</p></article>
-      <article class="info-card amber"><h3>Report flood patterns</h3><p>Submit repeated street flooding, blocked drains, sewer backup clusters, water depth, and dates to improve community planning.</p></article>
-    </div>
-  </section>
-
-  <section class="section-band" id="data-host">
-    <div class="section-heading">
-      <div>
-        <p class="eyebrow">Actual-data host</p>
-        <h2>Data sources this platform is designed to host</h2>
-      </div>
-      <p>The site is structured so sample data can be replaced by official feeds, GIS layers, or uploaded datasets.</p>
-    </div>
-    <div class="data-grid">
-      <article><strong>Rainfall</strong><span>Annual, seasonal, monthly, daily, and storm-event precipitation for the chosen location.</span></article>
-      <article><strong>Elevation</strong><span>Ground elevation and low-point logic for why water collects in specific areas.</span></article>
-      <article><strong>Flood zones and extent</strong><span>FEMA flood maps, historical flood extents, and local drainage problem areas.</span></article>
-      <article><strong>Soil and surface</strong><span>Soil drainage plus roads, roofs, parking lots, and other impervious surfaces.</span></article>
-      <article><strong>Sewer and waterways</strong><span>Storm sewer capacity, nearby drains, rivers, creeks, canals, and outlet constraints.</span></article>
-      <article><strong>Aid and programs</strong><span>Local, state, federal, nonprofit, and insurance reimbursement options.</span></article>
-    </div>
-  </section>
-
-  <section class="section-band" id="packet">
-    <div class="section-heading">
-      <div>
-        <p class="eyebrow">Step 5</p>
-        <h2>Packet builder</h2>
-      </div>
-      <p>Review the assembled documents, then print, download a ZIP packet, or forward the summary.</p>
-    </div>
-    <div class="app-grid">
-      <form class="tool-panel" id="packetForm">
-        <div class="form-grid two">
-          <label>Insurance company
-            <input id="insurerName" name="insurerName" type="text" placeholder="Insurer or adjuster">
-          </label>
-          <label>Policy or claim number
-            <input id="policyNumber" name="policyNumber" type="text" placeholder="Policy / claim #">
-          </label>
-          <label>Adjuster or caseworker email
-            <input id="forwardEmail" name="forwardEmail" type="email" placeholder="email@example.com">
-          </label>
-          <label>Preferred contact method
-            <select id="contactMethod" name="contactMethod">
-              <option>Email</option>
-              <option>Phone</option>
-              <option>Mail</option>
-              <option>Text</option>
-            </select>
-          </label>
-          <label class="wide">Resident notes
-            <textarea id="residentNotes" name="residentNotes" rows="5" placeholder="Access issues, safety hazards, medical needs, lodging, or details the adjuster should know."></textarea>
-          </label>
-        </div>
-        <div class="action-row">
-          <button class="btn primary" type="button" id="zipBtn">Download ZIP packet</button>
-          <button class="btn secondary" type="button" id="printBtn">Print packet</button>
-          <button class="btn ghost" type="button" id="forwardBtn">Forward summary</button>
-          <button class="btn danger" type="button" id="clearBtn">Clear case</button>
-        </div>
-        <p class="fine-print">The ZIP includes claim-summary.html, inventory.csv, resident-info.json, assistance-checklist.txt, uploaded visuals, and receipts added during this session.</p>
-      </form>
-      <section class="document-preview" id="documentPreview" aria-live="polite"></section>
-    </div>
-  </section>
-</main>
-
-<footer class="footer">
-  <p><strong>Important:</strong> This prototype helps organize information and documents. It does not decide insurance coverage, legal eligibility, benefits, code compliance, or permit approval. Confirm final requirements with the insurer, local floodplain administrator, building official, licensed contractor, engineer, or assistance agency.</p>
-</footer>
-</div>
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>
