@@ -2444,3 +2444,383 @@ a.source-card:hover{
     padding:0;
   }
 }
+
+/* ============================================================
+   DARK MODE  —  prefers-color-scheme: dark
+   All hardcoded #fff / #f*/ rgba(255,255,255,…) values
+   and var() references are remapped here.
+   ============================================================ */
+@media (prefers-color-scheme: dark) {
+
+  /* ── 1. CSS variable overrides ── */
+  :root {
+    --background:     #0f1419;
+    --surface:        #1a2330;
+    --surface-soft:   #1e2a38;
+    --foreground:     #e8edf2;
+    --muted:          #8fa5b8;
+    --muted-2:        #657a8e;
+    --line:           #2a3a4a;
+    --primary:        #5ba3d4;
+    --primary-2:      #3dbfb8;
+    --green:          #4ea870;
+    --amber:          #d4933a;
+    --rose:           #e05a5a;
+    --blue-soft:      #192840;
+    --teal-soft:      #153330;
+    --green-soft:     #162a1e;
+    --amber-soft:     #2a1e0a;
+    --rose-soft:      #2a1010;
+    --shadow:         0 16px 38px rgba(0,0,0,.35);
+  }
+
+  /* ── 2. Body grid background ── */
+  body {
+    background:
+      linear-gradient(90deg, rgba(91,163,212,.04) 1px, transparent 1px),
+      linear-gradient(180deg, rgba(78,168,112,.04) 1px, transparent 1px),
+      var(--background);
+  }
+
+  /* ── 3. Topbar ── */
+  .topbar {
+    background: rgba(15,20,25,.92);
+  }
+
+  /* ── 4. Nav links hover / active ── */
+  .nav-links a:hover,
+  .nav-links a.active {
+    border-color: #2a4a6a;
+  }
+
+  /* ── 5. Status strip / focus-menu / hero-card ── */
+  .status-strip,
+  .focus-menu {
+    background: rgba(26,35,48,.96);
+  }
+
+  /* ── 6. Focus-menu tab buttons ── */
+  .focus-tab {
+    background: var(--surface);
+    color: var(--primary);
+  }
+  .focus-tab.active {
+    background: var(--blue-soft);
+    border-color: #2a4a6a;
+    color: var(--foreground);
+  }
+
+  /* ── 7. Hero cards ── */
+  .hero-card {
+    background: rgba(26,35,48,.96);
+  }
+
+  /* ── 8. Tool panels, panels, sections ── */
+  .tool-panel,
+  .panel {
+    background: var(--surface);
+  }
+
+  /* ── 9. Form elements ── */
+  input,
+  select,
+  textarea {
+    background: #111c27;
+    color: var(--foreground);
+    border-color: var(--line);
+  }
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--muted-2);
+  }
+  input:focus,
+  select:focus,
+  textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(91,163,212,.18);
+  }
+  /* Error state */
+  input.error,
+  select.error,
+  textarea.error {
+    background: var(--rose-soft);
+  }
+
+  /* ── 10. Hardcoded #fff / white backgrounds throughout ── */
+  /* Generic white-background cards */
+  .area-card,
+  .rain-card,
+  .gis-score-box,
+  .risk-readout,
+  .inline-control,
+  .sync-city-panel,
+  .gis-visual-grid > *,
+  .suggestion-card,
+  .next-step-card,
+  .check-grid label,
+  .assistance-card,
+  .step,
+  .infographic,
+  .tag,
+  .table-wrap,
+  .source-card,
+  .mini-btn,
+  .packet-doc,
+  .guide-alert-item,
+  .guide-toc,
+  .guide-route-card,
+  .guide-step,
+  .fix-card,
+  .issue-card,
+  .support-card,
+  .initiative-grid article,
+  .coverage-grid article,
+  .photo-grid article,
+  .data-grid article {
+    background: var(--surface);
+    color: var(--foreground);
+  }
+
+  /* The drop-zone upload area */
+  .upload-zone {
+    background: linear-gradient(180deg, var(--surface), var(--surface-soft));
+    border-color: #2d4255;
+    color: var(--muted);
+  }
+
+  /* ── 11. Buttons ── */
+  /* Ghost/outline buttons */
+  .btn {
+    border-color: var(--line);
+    background: var(--surface);
+    color: var(--foreground);
+  }
+  /* Primary — already uses var(--primary) bg, just ensure text is white */
+  .btn.primary { color: #fff; }
+  /* Secondary / teal */
+  .btn.secondary { color: #fff; }
+  /* Ghost */
+  .btn.ghost {
+    background: var(--surface);
+    color: var(--primary);
+    border-color: var(--line);
+  }
+  .btn.ghost:hover {
+    background: var(--blue-soft);
+  }
+  /* Danger */
+  .btn.danger {
+    background: var(--rose-soft);
+    border-color: #5a1f1f;
+    color: #f08080;
+  }
+
+  /* ── 12. Tables ── */
+  table { background: var(--surface); }
+  th {
+    background: var(--surface-soft);
+    color: var(--muted);
+  }
+  td { color: var(--muted); }
+  th, td { border-bottom-color: var(--line); }
+  td input, td select, td textarea {
+    background: #111c27;
+    color: var(--foreground);
+    border-color: var(--line);
+  }
+
+  /* ── 13. Progress / score bars ── */
+  .score-bar-track { background: #1e2e3e; }
+
+  /* ── 14. Status cards (sidebar panels) ── */
+  .status-card { background: var(--surface-soft); }
+
+  /* ── 15. Hardcoded gradient surfaces ── */
+  /* area-map / GIS map panel */
+  .area-map { background: #111c27; }
+  .area-map svg rect[fill="#f8fcff"],
+  .area-map svg rect[fill="#eaf5f8"] { fill: #1a2a38; }
+
+  /* Next-step card */
+  .next-step-card {
+    background: linear-gradient(180deg, #131f2d, var(--surface));
+    border-color: #2a4055;
+  }
+  .next-step-card strong { color: var(--primary); }
+
+  /* Coverage note */
+  .coverage-note {
+    background: var(--blue-soft);
+    color: var(--muted);
+  }
+
+  /* ── 16. Callouts ── */
+  .callout {
+    background: var(--blue-soft);
+  }
+  .callout.amber { background: var(--amber-soft); }
+  .callout.rose  { background: var(--rose-soft);  }
+
+  /* ── 17. Info cards ── */
+  .info-card.blue   { background: var(--blue-soft);  }
+  .info-card.teal   { background: var(--teal-soft);  }
+  .info-card.green  { background: var(--green-soft); }
+  .info-card.amber  { background: var(--amber-soft); }
+  .info-card.rose   { background: var(--rose-soft);  }
+
+  /* ── 18. Guide alert (rose border) ── */
+  .guide-alert {
+    background: var(--rose-soft);
+    border-color: rgba(206,65,65,.22);
+  }
+  .guide-alert h3 { color: #f08080; }
+  .guide-alert span { color: #c07070; }
+
+  /* ── 19. Packet / document preview ── */
+  .packet-doc {
+    background: var(--surface);
+    color: var(--foreground);
+  }
+  .packet-doc h3 { border-bottom-color: var(--line); }
+  .doc-field { color: var(--muted); }
+  .doc-field strong { color: var(--foreground); }
+
+  /* ── 20. Mini buttons ── */
+  .mini-btn {
+    background: var(--surface);
+    color: var(--primary);
+    border-color: var(--line);
+  }
+  .mini-btn.remove {
+    background: var(--rose-soft);
+    color: #f08080;
+    border-color: #5a1f1f;
+  }
+
+  /* ── 21. Assistance type badge ── */
+  .assistance-type {
+    background: var(--blue-soft);
+    color: var(--primary);
+    border-color: #2a4a6a;
+  }
+
+  /* ── 22. Hardcoded inline gradient overrides ── */
+  /* Packet section header gradient */
+  .packet-header {
+    background: linear-gradient(180deg, #1a4a6a, #1a5a48);
+  }
+
+  /* GIS / map section background (uses hardcoded inline style) */
+  .gis-readout,
+  .gis-score-box {
+    background: var(--surface-soft);
+  }
+
+  /* ── 23. Guide-route cards (links) ── */
+  .guide-route-card {
+    background: var(--surface);
+    border-color: var(--line);
+    color: var(--foreground);
+  }
+  .guide-route-card:hover {
+    border-color: var(--primary);
+    background: var(--blue-soft);
+  }
+  .guide-route-card small { color: var(--muted-2); }
+  .guide-route-card strong { color: var(--foreground); }
+  .guide-route-card span { color: var(--muted); }
+
+  /* ── 24. Photo hero section ── */
+  .photo-hero .hero-card.image-card {
+    background: var(--surface-soft);
+  }
+  .photo-hero figcaption { color: var(--muted); }
+
+  /* ── 25. Resilient-home SVG infographic ── */
+  .infographic svg rect[fill="url(#sky)"],
+  .infographic svg rect[fill="#d7ecf0"] {
+    fill: #121d28;
+  }
+
+  /* ── 26. Footer ── */
+  .footer {
+    border-top-color: var(--line);
+    color: var(--muted);
+  }
+
+  /* ── 27. Inline links ── */
+  .inline-link { color: var(--primary); }
+
+  /* ── 28. Section panels (resource pages) ── */
+  .section.panel {
+    background: var(--surface);
+    border-color: var(--line);
+  }
+
+  /* ── 29. Focus link grid (prepare page) ── */
+  .focus-link-grid a {
+    background: var(--surface);
+    color: var(--primary);
+    border-color: var(--line);
+  }
+  .focus-link-grid a:hover {
+    background: var(--blue-soft);
+    border-color: var(--primary);
+  }
+
+  /* ── 30. Guide checklist labels ── */
+  .guide-checklist label,
+  .urgent-checklist label {
+    color: var(--foreground);
+  }
+
+  /* ── 31. Strategy grid articles ── */
+  .strategy-grid article,
+  .strategy-flow article,
+  .guide-pairing-grid article {
+    background: var(--surface);
+    border-color: var(--line);
+  }
+
+  /* ── 32. Source cards (hover border) ── */
+  a.source-card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 8px 18px rgba(0,0,0,.35);
+  }
+
+  /* ── 33. Fix-path / fix-grid cards ── */
+  .fix-card,
+  .fix-path-card {
+    background: var(--surface);
+    border-color: var(--line);
+  }
+
+  /* ── 34. Community-form advice box ── */
+  #communityAdvice {
+    background: var(--surface-soft);
+  }
+  .community-advice {
+    background: var(--surface-soft);
+  }
+  .support-card {
+    background: var(--surface);
+    border-color: var(--line);
+  }
+
+  /* ── 35. Map tile overlay darkening ── */
+  .leaflet-tile-pane {
+    filter: invert(1) hue-rotate(180deg) brightness(.85) contrast(.9);
+  }
+  /* Don't invert markers */
+  .leaflet-marker-pane,
+  .leaflet-overlay-pane {
+    filter: none;
+  }
+
+  /* ── 36. Scrollbar (Chromium) ── */
+  ::-webkit-scrollbar { width: 8px; height: 8px; }
+  ::-webkit-scrollbar-track { background: var(--background); }
+  ::-webkit-scrollbar-thumb { background: #2a3a4a; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: #3a4f62; }
+
+}
