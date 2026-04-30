@@ -1803,6 +1803,23 @@ meter {
   bottom: 16px;
 }
 
+.membrane-plate {
+  padding: 0 8px;
+  font-size: clamp(0.78rem, 1.15vw, 0.96rem);
+  line-height: 1.1;
+  text-align: center;
+}
+
+.particle:nth-child(3) {
+  top: 28px;
+  left: 46%;
+}
+
+.particle:nth-child(4) {
+  right: 28%;
+  bottom: 28px;
+}
+
 .water-output {
   position: absolute;
   right: 34px;
@@ -4068,5 +4085,542 @@ meter {
     border: 0;
     border-radius: 0;
     background: #102126;
+  }
+}
+
+@media not all {
+  :root {
+    --ink: #edf7f3;
+    --muted: #b7c7c9;
+    --paper: #0b1214;
+    --surface: #121c20;
+    --line: rgba(214, 230, 225, 0.16);
+    --teal: #48c6b5;
+    --teal-dark: #8ce0d2;
+    --blue: #7aa7ff;
+    --green: #64d68d;
+    --grey: #aeb7be;
+    --brown: #d69a6f;
+    --rust: #ee8a6f;
+    --gold: #f0c75e;
+    --green-soft: #10241b;
+    --blue-soft: #101d34;
+    --gold-soft: #271f0d;
+    --rust-soft: #2b1712;
+    --slate-soft: #10181b;
+    --shadow: 0 18px 50px rgba(0, 0, 0, 0.34);
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    background:
+      radial-gradient(circle at 12% 0%, rgba(72, 198, 181, 0.12), transparent 32%),
+      radial-gradient(circle at 88% 10%, rgba(240, 199, 94, 0.1), transparent 28%),
+      linear-gradient(180deg, #0b1214, #0f171a 42%, #0b1214);
+  }
+
+  .site-header {
+    background: rgba(11, 18, 20, 0.94);
+    border-bottom-color: rgba(214, 230, 225, 0.14);
+  }
+
+  .brand-mark,
+  .nav-button,
+  .primary-action,
+  .secondary-action,
+  .scenario-button,
+  .color-tab,
+  .price-toggle {
+    border-color: rgba(214, 230, 225, 0.2);
+  }
+
+  .nav-button:hover,
+  .nav-button.active,
+  .scenario-button.active,
+  .price-toggle.active {
+    color: var(--ink);
+    background: #142226;
+    border-color: rgba(72, 198, 181, 0.55);
+  }
+
+  .program-strip,
+  .media-panel figcaption,
+  .motor-callout,
+  .infrastructure-picture-header figcaption {
+    background: #071012;
+  }
+
+  .split-band,
+  .hero-strip article,
+  .fact-card,
+  .analysis-card,
+  .loss-card,
+  .answer-grid article,
+  .path-card,
+  .tab-panels,
+  .price-place,
+  .model-card,
+  .type-compare-card,
+  .visual-card,
+  .science-card,
+  .science-explain article,
+  .primer-callouts article,
+  .cutaway-zone,
+  .sankey-visual,
+  .sankey-note,
+  .vehicle-label-grid article,
+  .mobility-card,
+  .implementation-flow article,
+  .evidence-strip article,
+  .study-frame article,
+  .infrastructure-chain article,
+  .scenario-study article,
+  .study-conclusion-grid article,
+  .source-card,
+  .source-list a {
+    color: var(--ink);
+    background: #121c20;
+    border-color: var(--line);
+  }
+
+  .type-model,
+  .price-toggle-section,
+  .type-compare-visual,
+  .visual-report,
+  .science-layer,
+  .narrative-block,
+  .full-report,
+  .element-fuel-cell-primer,
+  .vehicle-system-section,
+  .refuel-system-section,
+  .fuel-cell-cutaway-section,
+  .sankey-section,
+  .infrastructure-visual-break,
+  .final-verdict,
+  .sources {
+    background: linear-gradient(180deg, rgba(18, 28, 32, 0.96), rgba(12, 20, 23, 0.96));
+    border-color: var(--line);
+  }
+
+  .color-pane[data-color-pane="green"] {
+    background: linear-gradient(135deg, rgba(100, 214, 141, 0.14), rgba(18, 28, 32, 0.98) 48%);
+  }
+
+  .color-pane[data-color-pane="grey"] {
+    background: linear-gradient(135deg, rgba(174, 183, 190, 0.14), rgba(18, 28, 32, 0.98) 48%);
+  }
+
+  .color-pane[data-color-pane="blue"] {
+    background: linear-gradient(135deg, rgba(122, 167, 255, 0.14), rgba(18, 28, 32, 0.98) 48%);
+  }
+
+  .color-pane[data-color-pane="brown"] {
+    background: linear-gradient(135deg, rgba(214, 154, 111, 0.16), rgba(18, 28, 32, 0.98) 48%);
+  }
+
+  .model-green,
+  .model-grey,
+  .model-blue,
+  .model-brown {
+    background: #121c20;
+  }
+
+  .pane-story,
+  .verdict-banner,
+  .figure-caption,
+  .source-list a:hover {
+    color: var(--ink);
+    background: rgba(72, 198, 181, 0.1);
+    border-color: rgba(72, 198, 181, 0.32);
+  }
+
+  .comparison-table-wrap {
+    background: #10191d;
+    border-color: var(--line);
+  }
+
+  .comparison-table thead th,
+  .comparison-table caption {
+    color: var(--ink);
+    background: #17252a;
+  }
+
+  .comparison-table th,
+  .comparison-table td,
+  .report-entry,
+  .narrative-entry,
+  .type-details article {
+    border-color: var(--line);
+  }
+
+  .comparison-table tbody td,
+  .pane-copy p,
+  .type-details p,
+  .price-place p,
+  .visual-card p,
+  .science-card p,
+  .report-entry p,
+  .narrative-entry p,
+  .mobility-card p,
+  .implementation-flow p,
+  .source-card p,
+  .final-verdict p:not(.eyebrow) {
+    color: var(--muted);
+  }
+
+  .evidence-citations a {
+    color: var(--teal-dark);
+    background: #10191d;
+    border-color: rgba(72, 198, 181, 0.32);
+  }
+
+  .model-flow li,
+  .density-visual div,
+  .network-node,
+  .network-station,
+  .network-vehicle,
+  .pathway-card,
+  .source-card,
+  .price-place {
+    background: #10191d;
+  }
+
+  .temperature-visual,
+  .energy-bar .track,
+  .fit-bar div,
+  .waterfall-step i,
+  .sankey-stage i,
+  .compare-bars i {
+    background: #24333a;
+  }
+
+  .equation {
+    color: #dff7ff !important;
+    background: #101d34;
+    border-color: rgba(122, 167, 255, 0.42);
+  }
+
+  .type-image,
+  .fuel-cell-stack-visual,
+  .car-shell,
+  .hydrogen-port-diagram,
+  .refuel-network,
+  .infrastructure-picture-header {
+    box-shadow: 0 12px 34px rgba(0, 0, 0, 0.24);
+  }
+
+  .source-card a,
+  .report-entry h3,
+  .narrative-entry h3,
+  .primer-callouts span {
+    color: var(--teal-dark);
+  }
+}
+
+/* High-contrast default pass: keep the designed light palette, but make text and panels stronger. */
+html {
+  color-scheme: light;
+}
+
+:root {
+  --muted: #33424b;
+  --line: #b8c4bd;
+  --teal-dark: #063f3a;
+  --blue: #1d4ed8;
+  --green: #0f773b;
+  --grey: #4b5563;
+  --brown: #7a3f1f;
+  --rust: #9f341e;
+  --gold: #9a6b00;
+}
+
+.section-heading p:not(.eyebrow),
+.visual-heading p:not(.eyebrow),
+.science-heading p:not(.eyebrow),
+.model-heading p:not(.eyebrow),
+.pane-copy p,
+.type-details p,
+.price-place p,
+.visual-card p,
+.science-card p,
+.science-explain p,
+.report-entry p,
+.narrative-entry p,
+.mobility-card p,
+.implementation-flow p,
+.source-card p,
+.source-list a,
+.final-verdict p:not(.eyebrow),
+.comparison-table tbody td {
+  color: var(--muted);
+}
+
+.fact-card,
+.analysis-card,
+.loss-card,
+.answer-grid article,
+.path-card,
+.model-card,
+.type-compare-card,
+.visual-card,
+.science-card,
+.science-explain article,
+.price-place,
+.source-card,
+.source-list a,
+.mobility-card,
+.implementation-flow article,
+.evidence-strip article,
+.study-frame article,
+.infrastructure-chain article,
+.scenario-study article,
+.study-conclusion-grid article,
+.vehicle-label-grid article,
+.primer-callouts article,
+.cutaway-zone,
+.pathway-card {
+  border-color: var(--line);
+}
+
+.equation {
+  color: #06131a !important;
+  background: #dfeaff;
+  border-color: rgba(29, 78, 216, 0.34);
+}
+
+.figure-caption,
+.pane-story,
+.verdict-banner {
+  color: #06131a;
+  border-color: rgba(15, 118, 110, 0.32);
+}
+
+.comparison-table thead th,
+.comparison-table caption {
+  color: #06131a;
+  background: #e2ece7;
+}
+
+/* Forced readability pass for appearance settings that wash out long report text. */
+html,
+body {
+  color-scheme: only light !important;
+}
+
+body,
+main,
+.page-section,
+.sources {
+  color: #06131a;
+}
+
+.narrative-block,
+.full-report,
+.section-heading,
+.visual-report,
+.science-layer,
+.type-model,
+.type-compare-visual,
+.price-toggle-section,
+.element-fuel-cell-primer,
+.vehicle-system-section,
+.refuel-system-section,
+.infrastructure-visual-break,
+.fuel-cell-cutaway-section,
+.sankey-section {
+  color: #06131a !important;
+}
+
+.narrative-block {
+  background: linear-gradient(135deg, #fff5cc 0%, #ffffff 52%, #edf8f5 100%) !important;
+  border-color: #aebdb6 !important;
+}
+
+.full-report {
+  background: #ffffff !important;
+  border-color: #aebdb6 !important;
+}
+
+.narrative-heading h2,
+.narrative-entry h3,
+.report-heading h2,
+.report-entry h3,
+.section-heading h2,
+.visual-heading h2,
+.science-heading h2,
+.model-heading h2,
+.full-report h2,
+.full-report h3 {
+  color: #06131a !important;
+}
+
+.narrative-entry p,
+.report-entry p,
+.section-heading p:not(.eyebrow),
+.visual-heading p:not(.eyebrow),
+.science-heading p:not(.eyebrow),
+.model-heading p:not(.eyebrow),
+.full-report p,
+.narrative-block p {
+  color: #20313a !important;
+}
+
+.narrative-entry,
+.report-entry {
+  border-color: #aebdb6 !important;
+}
+
+.narrative-heading .eyebrow,
+.section-heading .eyebrow,
+.visual-heading .eyebrow,
+.science-heading .eyebrow,
+.model-heading .eyebrow,
+.report-heading .eyebrow {
+  color: #064e46 !important;
+}
+
+/* Fuel-cell primer layout: keep the model visible instead of letting it push callouts off-screen. */
+.element-fuel-cell-primer {
+  overflow: hidden;
+  background: #f4f8fb !important;
+}
+
+.primer-layout {
+  grid-template-columns: minmax(0, 1.08fr) minmax(250px, 0.72fr);
+  grid-template-areas:
+    "visual left"
+    "visual right";
+  align-items: stretch;
+}
+
+.primer-layout > * {
+  min-width: 0;
+}
+
+.fuel-cell-stack-visual {
+  grid-area: visual;
+  min-height: clamp(420px, 36vw, 500px);
+  background:
+    radial-gradient(circle at 18% 75%, rgba(232, 178, 74, 0.24), transparent 22%),
+    linear-gradient(135deg, #ffffff, #eef6fb) !important;
+}
+
+.left-callouts {
+  grid-area: left;
+}
+
+.right-callouts {
+  grid-area: right;
+}
+
+.primer-callouts {
+  align-content: stretch;
+}
+
+.primer-callouts article {
+  min-height: 0;
+  background: #ffffff !important;
+}
+
+.primer-callouts p {
+  color: #20313a !important;
+}
+
+.gas-stream {
+  max-width: calc(100% - 40px);
+  flex-wrap: wrap;
+}
+
+.hydrogen-stream {
+  right: 20px;
+}
+
+.oxygen-stream {
+  left: 20px;
+}
+
+@media (max-width: 960px) {
+  .primer-layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "left"
+      "visual"
+      "right";
+  }
+
+  .primer-callouts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .fuel-cell-stack-visual {
+    min-height: 460px;
+  }
+}
+
+@media (max-width: 640px) {
+  .primer-callouts {
+    grid-template-columns: 1fr;
+  }
+
+  .fuel-cell-stack-visual {
+    min-height: 430px;
+  }
+}
+
+/* Named molecule positions keep the fuel-cell chemistry readable. */
+.particle-field {
+  inset: 78px 8% 72px 8%;
+}
+
+.particle {
+  box-shadow: 0 6px 16px rgba(23, 32, 38, 0.16);
+}
+
+.particle.proton-source {
+  top: 58%;
+  left: 41%;
+  right: auto;
+  bottom: auto;
+}
+
+.particle.proton-crossed {
+  top: 68%;
+  left: 61%;
+  right: auto;
+  bottom: auto;
+}
+
+.particle.electron-circuit-one {
+  top: 78%;
+  left: 27%;
+  right: auto;
+  bottom: auto;
+}
+
+.particle.electron-circuit-two {
+  top: 78%;
+  left: 43%;
+  right: auto;
+  bottom: auto;
+}
+
+.particle.product-water {
+  top: 66%;
+  left: 76%;
+  right: auto;
+  bottom: auto;
+}
+
+@media (max-width: 640px) {
+  .particle-field {
+    inset: 92px 7% 78px 7%;
+  }
+
+  .particle.electron-circuit-one,
+  .particle.electron-circuit-two {
+    top: 76%;
   }
 }
