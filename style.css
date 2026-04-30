@@ -1762,16 +1762,11 @@ td textarea{
   padding:18px;
   box-shadow:none;
 }
-.info-card.blue{background:var(--blue-soft);color:#0f2d45}
-.info-card.teal{background:var(--teal-soft);color:#0a2a28}
-.info-card.green{background:var(--green-soft);color:#0d2b18}
-.info-card.amber{background:var(--amber-soft);color:#3a2000}
-.info-card.rose{background:var(--rose-soft);color:#3a0f0f}
-.info-card.blue p,.info-card.blue span,.info-card.blue small{color:#1a4a6e}
-.info-card.teal p,.info-card.teal span,.info-card.teal small{color:#1a4040}
-.info-card.green p,.info-card.green span,.info-card.green small{color:#1a4a28}
-.info-card.amber p,.info-card.amber span,.info-card.amber small{color:#5a3400}
-.info-card.rose p,.info-card.rose span,.info-card.rose small{color:#5a1a1a}
+.info-card.blue{background:var(--blue-soft)}
+.info-card.teal{background:var(--teal-soft)}
+.info-card.green{background:var(--green-soft)}
+.info-card.amber{background:var(--amber-soft)}
+.info-card.rose{background:var(--rose-soft)}
 .info-card .num{
   color:var(--primary);
   font-size:30px;
@@ -1795,12 +1790,8 @@ td textarea{
   padding:14px;
   margin-top:14px;
 }
-.callout{color:#0f2d45}
-.callout p,.callout strong,.callout a{color:#0f2d45}
-.callout.amber{border-left-color:var(--amber);background:var(--amber-soft);color:#3a2000}
-.callout.amber p,.callout.amber strong,.callout.amber a{color:#3a2000}
-.callout.rose{border-left-color:var(--rose);background:var(--rose-soft);color:#3a0f0f}
-.callout.rose p,.callout.rose strong,.callout.rose a{color:#3a0f0f}
+.callout.amber{border-left-color:var(--amber);background:var(--amber-soft)}
+.callout.rose{border-left-color:var(--rose);background:var(--rose-soft)}
 .steps{
   counter-reset:item;
   display:grid;
@@ -2454,67 +2445,307 @@ a.source-card:hover{
   }
 }
 
-/* ── Colored-background text fixes ─────────────────────────── */
+/* ============================================================
+   DARK MODE — prefers-color-scheme: dark
+   ============================================================ */
+@media (prefers-color-scheme: dark) {
 
-/* Triage / pathway cards with rose gradient */
-.triage-card.urgent,
-.pathway-card.urgent {
-  color: #3a0f0f;
+  /* 1. Root token overrides */
+  :root {
+    --background:   #0f1419;
+    --surface:      #1a2330;
+    --surface-soft: #1e2a38;
+    --foreground:   #e8edf2;
+    --muted:        #8fa5b8;
+    --muted-2:      #657a8e;
+    --line:         #2a3a4a;
+    --primary:      #5ba3d4;
+    --primary-2:    #3dbfb8;
+    --green:        #4ea870;
+    --amber:        #d4933a;
+    --rose:         #e05a5a;
+    --blue-soft:    #192840;
+    --teal-soft:    #153330;
+    --green-soft:   #162a1e;
+    --amber-soft:   #2a1e0a;
+    --rose-soft:    #2a1010;
+    --shadow:       0 16px 38px rgba(0,0,0,.4);
+  }
+
+  /* 2. Body grid */
+  body {
+    background:
+      linear-gradient(90deg, rgba(91,163,212,.04) 1px, transparent 1px),
+      linear-gradient(180deg, rgba(78,168,112,.04) 1px, transparent 1px),
+      var(--background);
+  }
+
+  /* 3. Topbar */
+  .topbar { background: rgba(15,20,25,.92); }
+
+  /* 4. Nav active/hover */
+  .nav-links a:hover,
+  .nav-links a.active { border-color: #2a4a6a; }
+
+  /* 5. White/near-white surfaces → dark surface */
+  .status-strip,
+  .focus-menu,
+  .hero-card,
+  .tool-panel,
+  .panel,
+  .triage-card,
+  .issue-card,
+  .coverage-card,
+  .data-grid article,
+  .pathway-card,
+  .plan-card,
+  .plan-note,
+  .step,
+  .layer-button,
+  .layer-status-card,
+  .layer-source-view,
+  .area-card,
+  .rain-card,
+  .official-map-card,
+  .official-map-hub,
+  .source-directory,
+  .suggestion-card,
+  .next-step-card,
+  .check-grid label,
+  .assistance-card,
+  .infographic,
+  .tag,
+  .table-wrap,
+  .source-card,
+  .mini-btn,
+  .packet-doc,
+  .guide-toc,
+  .guide-route-card,
+  .insurance-decision,
+  .coverage-note,
+  .upload-zone,
+  .quick-start-form,
+  .hope-strip,
+  .help-plan,
+  .gis-score-box,
+  .gis-readout {
+    background: var(--surface);
+    color: var(--foreground);
+    border-color: var(--line);
+  }
+
+  /* 6. Fix all the #fff→surface-soft gradient cards (they turn into white→dark fades) */
+  .focus-menu,
+  .guided-start,
+  .help-plan,
+  .insurance-decision,
+  .area-card,
+  .official-map-hub,
+  .hope-strip {
+    background: var(--surface);
+  }
+
+  /* 7. Rose gradient cards (urgent triage/pathway) — fix fade */
+  .triage-card.urgent,
+  .pathway-card.urgent,
+  .guided-choice.danger-choice {
+    background: linear-gradient(180deg, #2a1010, var(--surface));
+    border-color: #5a2020;
+    color: var(--foreground);
+  }
+  .triage-card.urgent ul,
+  .triage-card.urgent p,
+  .pathway-card.urgent span,
+  .pathway-card.urgent strong {
+    color: #e8a0a0;
+  }
+  .pathway-card.urgent small { color: var(--rose); }
+
+  /* 8. Green gradient (help-plan) */
+  .help-plan {
+    background: linear-gradient(180deg, var(--surface), #162a1e);
+    border-color: rgba(78,168,112,.3);
+  }
+
+  /* 9. Blue gradient (hope-strip, guided-start) */
+  .hope-strip {
+    background: linear-gradient(135deg, #192840, var(--surface));
+    border-color: var(--line);
+    color: var(--foreground);
+  }
+  .hope-strip p { color: var(--muted); }
+
+  /* 10. Insurance decision - was white→surface-soft fade */
+  .insurance-decision {
+    background: linear-gradient(180deg, var(--surface), var(--surface-soft));
+  }
+
+  /* 11. Layer buttons */
+  .layer-button {
+    background: var(--surface);
+    color: var(--foreground);
+    border-color: var(--line);
+  }
+  .layer-button.active {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(91,163,212,.18);
+  }
+  .layer-button span { color: var(--muted); }
+
+  /* 12. Layer status cards */
+  .layer-status-card {
+    background: var(--surface);
+    border-color: var(--line);
+  }
+  .layer-status-card small,
+  .layer-status-card span { color: var(--muted); }
+  .layer-status-card strong { color: var(--foreground); }
+  .layer-status-card p { color: var(--muted); }
+
+  /* 13. Official map cards */
+  .official-map-card { background: var(--surface); }
+  .official-map-empty {
+    background: linear-gradient(135deg, #111c27, #131f2d);
+    color: var(--muted);
+  }
+
+  /* 14. Leaflet maps — invert tiles for dark look, preserve markers */
+  .leaflet-tile-pane {
+    filter: invert(1) hue-rotate(180deg) brightness(.85) contrast(.9);
+  }
+  .leaflet-marker-pane,
+  .leaflet-overlay-pane { filter: none; }
+
+  /* 15. Forms */
+  input, select, textarea {
+    background: #111c27;
+    color: var(--foreground);
+    border-color: var(--line);
+  }
+  input::placeholder, textarea::placeholder { color: var(--muted-2); }
+  input:focus, select:focus, textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(91,163,212,.18);
+  }
+  input.error, select.error, textarea.error { background: var(--rose-soft); }
+
+  /* 16. Tables */
+  table { background: var(--surface); }
+  th { background: var(--surface-soft); color: var(--muted); }
+  td { color: var(--muted); }
+  th, td { border-bottom-color: var(--line); }
+  td input, td select, td textarea {
+    background: #111c27;
+    color: var(--foreground);
+    border-color: var(--line);
+  }
+
+  /* 17. Buttons */
+  .btn {
+    border-color: var(--line);
+    background: var(--surface);
+    color: var(--foreground);
+  }
+  .btn.primary { background: var(--primary); border-color: var(--primary); color: #fff; }
+  .btn.secondary, .btn.teal { background: var(--primary-2); border-color: var(--primary-2); color: #fff; }
+  .btn.ghost { background: var(--surface); color: var(--primary); border-color: var(--line); }
+  .btn.ghost:hover { background: var(--blue-soft); }
+  .btn.danger { background: var(--rose-soft); border-color: #5a1f1f; color: #f08080; }
+
+  /* 18. Mini buttons */
+  .mini-btn { background: var(--surface); color: var(--primary); border-color: var(--line); }
+  .mini-btn.remove { background: var(--rose-soft); color: #f08080; border-color: #5a1f1f; }
+
+  /* 19. Callouts */
+  .callout { background: var(--blue-soft); color: var(--foreground); }
+  .callout p, .callout strong { color: var(--foreground); }
+  .callout.amber { background: var(--amber-soft); border-left-color: var(--amber); }
+  .callout.amber p, .callout.amber strong { color: #f0c060; }
+  .callout.rose { background: var(--rose-soft); border-left-color: var(--rose); }
+  .callout.rose p, .callout.rose strong { color: #f08080; }
+
+  /* 20. Info cards */
+  .info-card.blue  { background: var(--blue-soft);  color: var(--foreground); }
+  .info-card.teal  { background: var(--teal-soft);  color: var(--foreground); }
+  .info-card.green { background: var(--green-soft); color: var(--foreground); }
+  .info-card.amber { background: var(--amber-soft); color: #f0c060; }
+  .info-card.rose  { background: var(--rose-soft);  color: #f08080; }
+  .info-card.blue p,.info-card.teal p,.info-card.green p { color: var(--muted); }
+  .info-card.amber p { color: #c0944a; }
+  .info-card.rose p  { color: #c06060; }
+
+  /* 21. Status cards */
+  .status-card { background: var(--surface-soft); border-color: var(--line); }
+  .status-card p { color: var(--muted); }
+  .status-card strong { color: var(--foreground); }
+
+  /* 22. Tags */
+  .tag { background: var(--surface); color: var(--primary); border-color: var(--line); }
+
+  /* 23. Coverage note */
+  .coverage-note { background: var(--blue-soft); color: var(--muted); }
+
+  /* 24. Next-step card */
+  .next-step-card {
+    background: linear-gradient(180deg, #131f2d, var(--surface));
+    border-color: #2a4055;
+  }
+  .next-step-card strong { color: var(--primary); }
+  .next-step-card p { color: var(--muted); }
+
+  /* 25. Guide route cards */
+  .guide-route-card {
+    background: var(--surface);
+    border-color: var(--line);
+    color: var(--foreground);
+  }
+  .guide-route-card:hover { border-color: var(--primary); background: var(--blue-soft); }
+  .guide-route-card small { color: var(--muted-2); }
+  .guide-route-card span  { color: var(--muted); }
+
+  /* 26. Guide alert */
+  .guide-alert { background: var(--rose-soft); border-color: rgba(206,65,65,.22); }
+  .guide-alert strong { color: #f08080; }
+  .guide-alert span   { color: #c07070; }
+
+  /* 27. Source cards */
+  a.source-card:hover { border-color: var(--primary); box-shadow: 0 8px 18px rgba(0,0,0,.35); }
+  .source-card span { color: var(--muted); }
+
+  /* 28. Assistance type badge */
+  .assistance-type { background: var(--blue-soft); color: var(--primary); border-color: #2a4a6a; }
+
+  /* 29. Packet / doc preview */
+  .packet-doc { background: var(--surface); color: var(--foreground); }
+  .packet-doc h3 { border-bottom-color: var(--line); }
+  .doc-field { color: var(--muted); }
+  .doc-field strong { color: var(--foreground); }
+
+  /* 30. Upload zone */
+  .upload-zone {
+    background: linear-gradient(180deg, var(--surface), var(--surface-soft));
+    border-color: #2d4255;
+    color: var(--muted);
+  }
+
+  /* 31. Footer */
+  .footer { border-top-color: var(--line); color: var(--muted); }
+
+  /* 32. Inline link */
+  .inline-link { color: var(--primary); }
+
+  /* 33. Community advice / support cards */
+  #communityAdvice,
+  .community-advice { background: var(--surface-soft); }
+  .support-card { background: var(--surface); border-color: var(--line); }
+
+  /* 34. Score bar track */
+  .score-bar-track { background: #1e2e3e; }
+
+  /* 35. Scrollbars (Chromium) */
+  ::-webkit-scrollbar { width: 8px; height: 8px; }
+  ::-webkit-scrollbar-track { background: var(--background); }
+  ::-webkit-scrollbar-thumb { background: #2a3a4a; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: #3a4f62; }
+
 }
-.triage-card.urgent ul,
-.triage-card.urgent p,
-.pathway-card.urgent small {
-  color: #5a1a1a;
-}
-
-/* Guided-choice danger */
-.guided-choice.danger-choice {
-  color: #3a0f0f;
-}
-.guided-choice.danger-choice p,
-.guided-choice.danger-choice span {
-  color: #5a1a1a;
-}
-
-/* Help-plan green gradient */
-.help-plan {
-  color: #0d2b18;
-}
-.help-plan p { color: #1a4228; }
-
-/* Hope-strip blue gradient */
-.hope-strip { color: #0f2d45; }
-.hope-strip p { color: #1a4a6e; }
-
-/* Coverage note (blue-soft bg) */
-.coverage-note { color: #0f2d45; }
-
-/* Next-step card (teal-ish gradient) */
-.next-step-card strong { color: var(--primary-2); }
-.next-step-card p { color: var(--muted); }
-
-/* Table header (surface-soft) */
-th { color: #1e2e3b; }
-
-/* Guide alert (rose-soft) */
-.guide-alert strong { color: #7f1d1d; }
-.guide-alert span   { color: #5f2222; }
-
-/* Status-card on surface-soft — keep readable */
-.status-card p { color: var(--muted); }
-.status-card strong { color: var(--foreground); }
-
-/* assistance-type badge */
-.assistance-type { color: var(--primary); }
-
-/* Mini remove button */
-.mini-btn.remove { color: #7f1d1d; }
-
-/* btn.danger */
-.btn.danger { color: #7f1d1d; }
-
-/* source-card muted span already set — reinforce */
-.source-card span { color: var(--muted); }
-
-/* fine-print */
-.fine-print { color: var(--muted); }
