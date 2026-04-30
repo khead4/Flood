@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Map and Data Source Page | Macomb Flood Response Platform</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;650;750;850;900&display=swap" rel="stylesheet">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css?v=20260429-map-sources-1">
+</head>
+<body>
+<div class="site-shell">
+<header class="topbar">
+  <nav class="nav" aria-label="Primary">
+    <a href="index.html" class="brand">
+      <span class="logo">MFR</span>
+      <span class="brand-text"><strong>Macomb Flood Response</strong><span>Safety, local help, maps, and recovery packet</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Platform</a>
+      <a href="michigan-local-sources.html">Local Sources</a>
+      <a href="source-assistance.html">Assistance</a>
+      <a href="source-maps.html" class="active">Maps</a>
+      <a href="source-building.html">Building</a>
+      <a href="source-insurance.html">Insurance</a>
+      <a href="sources.html">All Sources</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-card">
+    <p class="eyebrow">Map and data source page</p>
+    <h1>Use the resident's location to source rain, elevation, flood maps, drains, and local GIS.</h1>
+    <p>Macomb GIS and drain maps are a local example. Every Michigan county or community may have different GIS layers, public works records, drain commissioner maps, and local flood-history records.</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="#data-layers">Data layers</a>
+      <a class="btn secondary" href="index.html#gis">Open GIS dashboard</a>
+    </div>
+  </div>
+  <aside class="quick-panel hero-card">
+    <div class="status-card">
+      <small>Map rule</small>
+      <strong>Do not use one county map statewide.</strong>
+      <p>Use FEMA and statewide/weather data for common layers, then swap local GIS and drain records based on the actual county or municipality.</p>
+    </div>
+    <div class="status-card">
+      <small>Resident question</small>
+      <strong>Why did this place flood?</strong>
+      <p>Pair rainfall, intensity, elevation, soil drainage, impervious surface, drains, sewer capacity, and waterways.</p>
+    </div>
+  </aside>
+</section>
+
+<section class="section panel" id="data-layers">
+  <p class="eyebrow">Layer source matrix</p>
+  <h2>Which source feeds each map layer?</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Layer</th><th>Statewide/federal source</th><th>Local source to swap in</th><th>Use in resident explanation</th></tr></thead>
+      <tbody>
+        <tr><td>Rainfall amount and intensity</td><td>Open-Meteo historical weather plus NWS/NOAA sources where available.</td><td>Local rain gauges or stormwater records if available.</td><td>Shows whether rain volume or speed overwhelmed the area.</td></tr>
+        <tr><td>Elevation and low points</td><td>Open-Meteo elevation plus USGS/state elevation or LiDAR datasets where available.</td><td>County or city LiDAR/contour layers if available.</td><td>Shows where water naturally collects.</td></tr>
+        <tr><td>Flood zones</td><td>FEMA Flood Map Service Center, FEMA National Flood Hazard Layer, and EGLE floodplain mapping guidance.</td><td>Local floodplain administrator notes and local higher-risk areas.</td><td>Shows mapped regulatory flood hazard context.</td></tr>
+        <tr><td>State/local GIS</td><td>Michigan EGLE Maps &amp; Data and Michigan Geographic Framework.</td><td>Resident's county GIS portal, parcel maps, roads, structures, land cover.</td><td>Shows address, parcels, roads, land use, natural features, and local context.</td></tr>
+        <tr><td>Drain maps, waterways, and watersheds</td><td>Michigan Hydrography, USGS hydrography, and Michigan Watershed Boundary GIS Data.</td><td>County drain commissioner, public works, local drain maps, stormwater maps.</td><td>Shows where water moves, backs up, or is constrained.</td></tr>
+        <tr><td>Soil drainage</td><td>NRCS SSURGO / Web Soil Survey where integrated.</td><td>Local engineering or stormwater plans if available.</td><td>Explains whether land absorbs water or holds it.</td></tr>
+        <tr><td>Impervious surfaces</td><td>Land-cover datasets where integrated.</td><td>County/city pavement, building footprint, road, parking, and parcel layers.</td><td>Explains runoff from roads, roofs, and concrete.</td></tr>
+        <tr><td>Flood discharge</td><td>EGLE Flood Flow Discharge Database and EGLE hydrologic data resources.</td><td>Engineering reports, bridge/culvert studies, stormwater plans.</td><td>Shows technical flow estimates used for dams, bridges, culverts, and floodplain boundaries.</td></tr>
+        <tr><td>Transportation flood risk</td><td>SEMCOG Flood Risk Tool for Southeast Michigan transportation infrastructure.</td><td>Local road commission, public works, and emergency management road closure records.</td><td>Shows road, bridge, culvert, and pump-station vulnerability.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section panel">
+  <p class="eyebrow">Official map sources</p>
+  <h2>Start with these, then add the local county source</h2>
+  <div class="source-list">
+    <a class="source-card" href="https://www.michigan.gov/egle/maps-data/" target="_blank" rel="noopener"><strong>Michigan EGLE Maps &amp; Data</strong><span>State environmental maps, water, wetlands, wells, dashboards, data systems, and open GIS data.</span></a>
+    <a class="source-card" href="https://www.michigan.gov/egle/about/organization/water-resources/floodplain-management/floodplain-mapping" target="_blank" rel="noopener"><strong>EGLE Floodplain Mapping</strong><span>Michigan floodplain mapping guidance and links to FEMA flood products.</span></a>
+    <a class="source-card" href="https://msc.fema.gov/portal" target="_blank" rel="noopener"><strong>FEMA Flood Map Service Center</strong><span>Official flood map lookup for an address or community.</span></a>
+    <a class="source-card" href="https://hazards-fema.maps.arcgis.com/apps/webappviewer/index.html?id=8b0adb51996444d4879338b5529aa9cd" target="_blank" rel="noopener"><strong>FEMA National Flood Hazard Layer Viewer</strong><span>Interactive viewer for current effective FEMA flood hazard layers.</span></a>
+    <a class="source-card" href="https://www.arcgis.com/home/item.html?id=e0249bb517164f26add606b2bb096f50" target="_blank" rel="noopener"><strong>Michigan Watershed Boundary GIS Data</strong><span>Watershed and HUC boundary data for drainage-area context.</span></a>
+    <a class="source-card" href="https://gisagocss.state.mi.us/arcgis/rest/services/OpenData/hydro/MapServer" target="_blank" rel="noopener"><strong>Michigan Hydrography</strong><span>Statewide rivers, lakes, streams, watersheds, wetlands, and waterway GIS layers.</span></a>
+    <a class="source-card" href="https://www.egle.state.mi.us/flow/hflowqry.asp" target="_blank" rel="noopener"><strong>EGLE Flood Flow Discharge Database</strong><span>Flood discharge estimates used for dams, bridges, culverts, and floodplain boundaries.</span></a>
+    <a class="source-card" href="https://maps.semcog.org/floodrisktool/" target="_blank" rel="noopener"><strong>SEMCOG Flood Risk Tool</strong><span>Southeast Michigan transportation flood risk for roads, bridges, culverts, and pump stations.</span></a>
+    <a class="source-card" href="https://open-meteo.com/en/docs/historical-weather-api" target="_blank" rel="noopener"><strong>Open-Meteo Historical Weather API</strong><span>Historical precipitation data by coordinate.</span></a>
+    <a class="source-card" href="https://open-meteo.com/en/docs/elevation-api" target="_blank" rel="noopener"><strong>Open-Meteo Elevation API</strong><span>Coordinate-based elevation lookup.</span></a>
+    <a class="source-card" href="https://gis.macombgov.org/home/layers.html" target="_blank" rel="noopener"><strong>Macomb GIS Layers</strong><span>Macomb-specific example, not a statewide replacement.</span></a>
+    <a class="source-card" href="https://www.macombgov.org/departments/public-works/public-works-resources/macomb-county-drain-maps" target="_blank" rel="noopener"><strong>Macomb County Drain Maps</strong><span>Macomb-specific drainage example.</span></a>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <p><strong>Important:</strong> Map layers can be outdated, incomplete, or jurisdiction-specific. Use official local sources and confirm permit or floodplain decisions with local officials.</p>
+</footer>
+</div>
+</body>
+</html>

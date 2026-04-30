@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Local Government Action | Macomb Flood Response Platform</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;650;750;850;900&display=swap" rel="stylesheet">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="site-shell">
+<header class="topbar">
+  <nav class="nav" aria-label="Primary">
+    <a href="index.html" class="brand">
+      <span class="logo">MFR</span>
+      <span class="brand-text"><strong>Macomb Flood Response</strong><span>Safety, local help, maps, and recovery packet</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Platform</a>
+      <a href="source-assistance.html">Assistance</a>
+      <a href="source-maps.html">Maps</a>
+      <a href="laws-codes.html">Laws</a>
+      <a href="government-action.html" class="active">Government Action</a>
+      <a href="sources.html">Sources</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-card">
+    <p class="eyebrow">Site 1</p>
+    <h1>Use local flood data to ask the right government office for a fix.</h1>
+    <p>Choose the area, collect rain/elevation/flood-map context, identify the local building and zoning questions, document the code gaps, and build a ZBA or local appeal packet.</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="#area-check">Choose area</a>
+      <a class="btn secondary" href="#code-gaps">Code gaps</a>
+      <a class="btn ghost" href="#zba-packet">Build ZBA packet</a>
+    </div>
+  </div>
+  <aside class="quick-panel hero-card">
+    <div class="status-card">
+      <small>Use this for</small>
+      <strong>Local law, zoning, drains, and public action.</strong>
+      <p>This does not decide a legal appeal. It organizes the evidence and questions residents need before contacting the correct office.</p>
+    </div>
+    <div class="status-card">
+      <small>Core packet</small>
+      <strong>ZBA + property + ruling + evidence.</strong>
+      <p>Most local appeals need the board name, property info, the decision or rule being challenged, the requested relief, and supporting evidence.</p>
+    </div>
+  </aside>
+</section>
+
+<section class="section panel" id="area-check">
+  <p class="eyebrow">Area check</p>
+  <h2>Start with the place. The law and the flooding facts change by city, township, and parcel.</h2>
+  <div class="form-grid">
+    <label>Choose area
+      <select id="areaSelect">
+        <option value="mount-clemens">Mount Clemens / Clinton River area</option>
+        <option value="clinton-township">Clinton Township</option>
+        <option value="warren">Warren / Center Line area</option>
+        <option value="macomb-county">Macomb County / other local area</option>
+      </select>
+    </label>
+    <label>Property address or cross streets
+      <input id="propertyAddress" type="text" placeholder="Street, city, ZIP">
+    </label>
+    <label>Flooding problem
+      <select id="problemType">
+        <option>Repeated basement flooding</option>
+        <option>Street or yard flooding</option>
+        <option>Sewer or drain backup</option>
+        <option>Waterway, ditch, or drain overflow</option>
+        <option>Buying or rebuilding question</option>
+      </select>
+    </label>
+    <label>What office are you contacting?
+      <select id="officeType">
+        <option>Zoning Board of Appeals</option>
+        <option>Building department</option>
+        <option>Floodplain administrator</option>
+        <option>Public works or drain office</option>
+        <option>City/township board or council</option>
+      </select>
+    </label>
+  </div>
+  <div class="dashboard-grid" id="areaProfile" aria-live="polite"></div>
+  <div class="resource-links">
+    <a href="index.html#gis">Open rain/elevation dashboard</a>
+    <a href="https://gis.macombgov.org/webmaps/Flexmobile2/" target="_blank" rel="noopener">Open Macomb GIS web map</a>
+    <a href="https://msc.fema.gov/portal/search" target="_blank" rel="noopener">Open FEMA flood map search</a>
+    <a href="https://www.macombgov.org/departments/public-works/public-works-resources/macomb-county-drain-maps" target="_blank" rel="noopener">Open county drain maps</a>
+  </div>
+</section>
+
+<section class="section panel" id="law-questions">
+  <p class="eyebrow">Local law questions</p>
+  <h2>Ask these before repair, rebuilding, buying, or challenging a decision.</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Question</th><th>Why it matters</th><th>Evidence to bring</th></tr></thead>
+      <tbody>
+        <tr><td>What municipality controls zoning and permits for this parcel?</td><td>The city or township controls local zoning, permits, and many appeal routes.</td><td>Address, parcel number, municipality, tax record, photos.</td></tr>
+        <tr><td>Is the parcel in a mapped flood zone, floodway, drain corridor, wetland, shoreline, or easement?</td><td>These can change what can be repaired, filled, rebuilt, or appealed.</td><td>FEMA map, Macomb GIS screenshot, drain map, survey, site plan.</td></tr>
+        <tr><td>Does the work trigger permits, inspections, substantial damage, substantial improvement, or elevation certificate review?</td><td>Residents can spend money too early if they do not know the approval gates.</td><td>Repair estimate, damage estimate, contractor scope, photos, prior permits.</td></tr>
+        <tr><td>Is the problem caused by private property conditions, public drainage, sewer capacity, road runoff, or a combination?</td><td>Different offices handle private repairs, public drains, utility backups, and zoning changes.</td><td>Rain dates, photos, videos, plumber report, public works notes, neighbor statements.</td></tr>
+        <tr><td>What standard would prevent repeat damage rather than only meet the minimum code?</td><td>Minimum compliance may not protect against heavier rain, low elevation, sewer backup, or repeated flooding.</td><td>Elevation, water line, utility height, drain route, proposed mitigation plan.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section panel" id="code-gaps">
+  <p class="eyebrow">Code gaps</p>
+  <h2>Use the experience report to show where current rules are not enough.</h2>
+  <div class="policy-gap-grid">
+    <article class="policy-gap-card"><small>Gap 1</small><strong>Flood maps do not capture every flooding mechanism.</strong><span>Rain intensity, sewer backup, low road grades, impervious surfaces, drains, and localized ponding can harm properties outside mapped flood zones.</span></article>
+    <article class="policy-gap-card"><small>Gap 2</small><strong>Permits are too hard to understand during recovery.</strong><span>Residents need one clear path showing when demolition, electrical, HVAC, plumbing, structural repair, grading, or utility relocation needs approval.</span></article>
+    <article class="policy-gap-card"><small>Gap 3</small><strong>Minimum code is not the same as flood-ready housing.</strong><span>A stronger standard raises utilities, improves drainage, uses flood-resistant lower materials, adds backflow protection, and plans for heavier rainfall.</span></article>
+    <article class="policy-gap-card"><small>Gap 4</small><strong>Public drainage and private building risk are separated.</strong><span>A home may meet building rules and still flood because the street, sewer, ditch, drain, or runoff path cannot handle the water.</span></article>
+  </div>
+</section>
+
+<section class="section panel" id="experience">
+  <p class="eyebrow">Experience report</p>
+  <h2>Document what happened so officials can see the pattern, not just one complaint.</h2>
+  <div class="form-grid">
+    <label>Name or household label
+      <input id="residentName" type="text" placeholder="Optional">
+    </label>
+    <label>Best contact for your own records
+      <input id="residentContact" type="text" placeholder="Optional phone or email">
+    </label>
+    <label>Dates this happened
+      <input id="eventDates" type="text" placeholder="Example: April 12 and April 18">
+    </label>
+    <label>Approximate water depth
+      <input id="waterDepth" type="text" placeholder="Example: 8 inches in basement">
+    </label>
+    <label class="wide">Describe the issue
+      <textarea id="experienceText" rows="5" placeholder="Where did water collect or enter? What failed? Which neighbors or streets were affected?"></textarea>
+    </label>
+    <label class="wide">What change are you asking for?
+      <textarea id="requestedFix" rows="4" placeholder="Example: drain inspection, road drainage review, backflow program, stronger permit guidance, utility elevation requirement, rain garden support."></textarea>
+    </label>
+  </div>
+</section>
+
+<section class="section panel" id="zba-packet">
+  <p class="eyebrow">ZBA or local appeal packet</p>
+  <h2>Build the packet before going to the board, department, or local official.</h2>
+  <div class="split-layout">
+    <div class="tool-panel">
+      <h3>Packet requirements</h3>
+      <div class="guide-checklist">
+        <label><input type="checkbox"> ZBA or local board name, meeting date if known, and municipality.</label>
+        <label><input type="checkbox"> Property information: owner/applicant, address, parcel number if available, zoning district, flood-zone context.</label>
+        <label><input type="checkbox"> The ruling, requirement, denial, interpretation, or code gap being challenged or changed.</label>
+        <label><input type="checkbox"> Requested action: variance, interpretation, appeal, ordinance improvement, drain/public works review, or local program request.</label>
+        <label><input type="checkbox"> Supporting evidence: plans, photos, videos, reports, repair estimates, plumber/electrician/HVAC notes, GIS/FEMA/drain-map screenshots, neighbor statements.</label>
+      </div>
+      <label class="file-drop">Attach plans, photos, reports, notices, or screenshots
+        <input id="zbaFiles" type="file" multiple>
+      </label>
+      <div class="file-list" id="zbaFileList">No files attached yet.</div>
+      <div class="action-row">
+        <button class="btn primary" type="button" id="downloadZbaPacket">Download ZBA packet</button>
+        <button class="btn secondary" type="button" id="printZbaPacket">Print template</button>
+      </div>
+    </div>
+    <div class="document-preview" id="zbaPreview"></div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <p><strong>Important:</strong> This page organizes local-government questions and appeal materials. It does not provide legal advice or guarantee permit, zoning, appeal, floodplain, or funding decisions. Confirm requirements with the local municipality before filing.</p>
+</footer>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  const $ = selector => document.querySelector(selector);
+  const areaProfiles = {
+    "mount-clemens": {
+      name: "Mount Clemens / Clinton River area",
+      elevation: "Low-to-moderate ground near river and drain corridors; verify parcel elevation in the GIS dashboard.",
+      rain: "Use the rain dashboard for annual, season, month, and day totals. Fast rainfall is often more important than annual totals during emergencies.",
+      flood: "Confirm FEMA zone in the Flood Map Service Center and compare with local drain maps.",
+      law: "Start with Mount Clemens building/zoning contacts, floodplain administrator if applicable, county drains, and Macomb GIS."
+    },
+    "clinton-township": {
+      name: "Clinton Township",
+      elevation: "Mixed elevation; low points, road runoff, and drain routes should be checked by address.",
+      rain: "Use the dashboard to load rainfall by selected year, season, month, and day.",
+      flood: "Use FEMA plus county GIS and drain maps; basement and sewer issues may not match FEMA mapped flood risk.",
+      law: "Start with township zoning/building, public services, county drain context, and any floodplain requirements."
+    },
+    "warren": {
+      name: "Warren / Center Line area",
+      elevation: "Urban drainage and impervious-surface runoff can matter even where ground is not the lowest point in the county.",
+      rain: "Track storm intensity and daily rain totals, not only yearly rainfall.",
+      flood: "Use FEMA flood maps, Macomb GIS, and the Warren / Center Line drain map together.",
+      law: "Start with city building/zoning, water/sewer/public works, and drain-map context."
+    },
+    "macomb-county": {
+      name: "Macomb County / other local area",
+      elevation: "Select the exact city, township, or coordinates in the GIS dashboard before relying on this summary.",
+      rain: "Use Open-Meteo rainfall records and local alerts for the selected place.",
+      flood: "Use FEMA flood maps for regulatory flood zone and Macomb drain maps for drainage context.",
+      law: "Replace Macomb examples with the actual local building department, zoning office, floodplain administrator, public works, utility, and drain office."
+    }
+  };
+
+  const fileState = [];
+
+  function esc(value){
+    return String(value || "").replace(/[&<>"']/g, char => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", "\"":"&quot;", "'":"&#39;" }[char]));
+  }
+
+  function selectedProfile(){
+    return areaProfiles[$("#areaSelect").value] || areaProfiles["macomb-county"];
+  }
+
+  function renderArea(){
+    const profile = selectedProfile();
+    $("#areaProfile").innerHTML = `
+      <article class="rain-card"><strong>${esc(profile.name)}</strong><span>Selected district</span></article>
+      <article class="rain-card"><strong>Elevation</strong><span>${esc(profile.elevation)}</span></article>
+      <article class="rain-card"><strong>Rainfall</strong><span>${esc(profile.rain)}</span></article>
+      <article class="rain-card"><strong>Flood level</strong><span>${esc(profile.flood)}</span></article>
+      <article class="rain-card"><strong>Local law</strong><span>${esc(profile.law)}</span></article>
+    `;
+    renderPreview();
+  }
+
+  function formValue(id){
+    return $(id)?.value?.trim() || "";
+  }
+
+  function renderFiles(){
+    const list = $("#zbaFileList");
+    if(!fileState.length){
+      list.textContent = "No files attached yet.";
+      return;
+    }
+    list.innerHTML = fileState.map(file => `<div class="file-row"><span>${esc(file.name)}</span><small>${Math.round(file.size / 1024)} KB</small></div>`).join("");
+  }
+
+  function packetHtml(){
+    const profile = selectedProfile();
+    const files = fileState.length ? fileState.map(file => `<li>${esc(file.name)} (${Math.round(file.size / 1024)} KB)</li>`).join("") : "<li>No attachments added yet.</li>";
+    return `
+      <article class="packet-doc">
+        <h2>Local Government / ZBA Support Packet</h2>
+        <div class="doc-grid">
+          <div class="doc-field"><strong>Area</strong>${esc(profile.name)}</div>
+          <div class="doc-field"><strong>Property</strong>${esc(formValue("#propertyAddress") || "Not entered")}</div>
+          <div class="doc-field"><strong>Problem</strong>${esc(formValue("#problemType"))}</div>
+          <div class="doc-field"><strong>Office</strong>${esc(formValue("#officeType"))}</div>
+        </div>
+        <h3>Local data to verify</h3>
+        <ul>
+          <li>Elevation: ${esc(profile.elevation)}</li>
+          <li>Rainfall: ${esc(profile.rain)}</li>
+          <li>Flood level / FEMA context: ${esc(profile.flood)}</li>
+          <li>Local law path: ${esc(profile.law)}</li>
+        </ul>
+        <h3>Experience report</h3>
+        <p><strong>Name/contact:</strong> ${esc(formValue("#residentName") || "Not entered")} / ${esc(formValue("#residentContact") || "Not entered")}</p>
+        <p><strong>Dates:</strong> ${esc(formValue("#eventDates") || "Not entered")}</p>
+        <p><strong>Water depth:</strong> ${esc(formValue("#waterDepth") || "Not entered")}</p>
+        <p><strong>Issue:</strong> ${esc(formValue("#experienceText") || "Not entered")}</p>
+        <p><strong>Requested fix:</strong> ${esc(formValue("#requestedFix") || "Not entered")}</p>
+        <h3>ZBA / appeal template</h3>
+        <ol>
+          <li>Board or department: ${esc(formValue("#officeType"))}</li>
+          <li>Property information: address, owner/applicant, parcel number if available, zoning district, flood map context.</li>
+          <li>Ruling or requirement being challenged: describe the decision, rule, denial, interpretation, or gap.</li>
+          <li>Requested action: explain the variance, appeal, interpretation, or policy improvement requested.</li>
+          <li>Supporting evidence: attach plans, photos, reports, GIS/FEMA/drain maps, repair estimates, and neighbor statements.</li>
+        </ol>
+        <h3>Attachments</h3>
+        <ul>${files}</ul>
+      </article>
+    `;
+  }
+
+  function renderPreview(){
+    $("#zbaPreview").innerHTML = packetHtml();
+  }
+
+  function sanitizeFileName(name){
+    return String(name || "file").replace(/[^a-z0-9._ -]/gi, "_").replace(/\s+/g, "_").slice(0, 90);
+  }
+
+  function downloadBlob(blob, fileName){
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = fileName;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1500);
+  }
+
+  async function downloadPacket(){
+    const boundary = "macomb-zba-packet";
+    const parts = [`<!doctype html><html><head><meta charset="utf-8"><title>ZBA packet</title><style>body{font-family:Arial,sans-serif;line-height:1.5;padding:24px;color:#17212b}li{margin-bottom:7px}</style></head><body>${packetHtml()}</body></html>`];
+    const fileNotes = fileState.map(file => `${file.name} - ${Math.round(file.size / 1024)} KB`).join("\\n") || "No files attached.";
+    parts.push(`ZBA PACKET ATTACHMENT LIST\\n\\n${fileNotes}\\n\\nBring uploaded originals with this packet if submitting outside this browser.`);
+    for(const file of fileState){
+      const buffer = await file.arrayBuffer();
+      parts.push(`\\n\\n--- ${sanitizeFileName(file.name)} (${file.type || "file"}) ---\\n`);
+      parts.push(new Uint8Array(buffer));
+    }
+    const blobParts = parts.map(part => part instanceof Uint8Array ? part : new TextEncoder().encode(String(part)));
+    downloadBlob(new Blob(blobParts, { type: "application/octet-stream" }), `${boundary}-${new Date().toISOString().slice(0,10)}.packet`);
+  }
+
+  $("#areaSelect").addEventListener("change", renderArea);
+  ["propertyAddress","problemType","officeType","residentName","residentContact","eventDates","waterDepth","experienceText","requestedFix"].forEach(id => {
+    const el = $(`#${id}`);
+    if(el) el.addEventListener("input", renderPreview);
+    if(el && el.tagName === "SELECT") el.addEventListener("change", renderPreview);
+  });
+  $("#zbaFiles").addEventListener("change", event => {
+    fileState.splice(0, fileState.length, ...Array.from(event.target.files || []));
+    renderFiles();
+    renderPreview();
+  });
+  $("#downloadZbaPacket").addEventListener("click", downloadPacket);
+  $("#printZbaPacket").addEventListener("click", () => window.print());
+  renderArea();
+  renderFiles();
+})();
+</script>
+</body>
+</html>

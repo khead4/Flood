@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Community Action | Macomb Flood Response Platform</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;650;750;850;900&display=swap" rel="stylesheet">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+<script src="community.js?v=20260430-community-guard-1" defer></script>
+</head>
+<body>
+<div class="site-shell">
+<header class="topbar">
+  <nav class="nav" aria-label="Primary">
+    <a href="index.html" class="brand">
+      <span class="logo">MFR</span>
+      <span class="brand-text"><strong>Macomb Flood Response</strong><span>Safety, local help, maps, and recovery packet</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#start">Start</a>
+      <a href="index.html#assistance">Assistance</a>
+      <a href="prepare.html">Prepare</a>
+      <a href="building-repairs.html">Building</a>
+      <a href="laws-codes.html#zoning-law-check">Laws</a>
+      <a href="community.html" class="active">Community</a>
+      <a href="sources.html">Sources</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-card">
+    <p class="eyebrow">Community action</p>
+    <h1>Turn repeated flooding into coordinated help.</h1>
+    <p>This page is for neighbor support and local initiatives: showing what is happening, getting practical advice, joining projects, volunteering, sharing items, and rebuilding together. Monetary assistance stays on the assistance page.</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="#issue-advice">Describe an issue</a>
+      <a class="btn secondary" href="#initiatives">Join an initiative</a>
+      <a class="btn ghost" href="#offer-help">Offer support</a>
+    </div>
+  </div>
+  <aside class="quick-panel hero-card">
+    <div class="status-card"><small>Use this for</small><strong>People power.</strong><p>Cleanup, tools, rain gardens, wall floodproofing, furniture, rebuild support, translation, rides, meals, and technical help.</p></div>
+    <div class="status-card"><small>Use assistance for</small><strong>Money or benefits.</strong><p>Food benefits, hotel costs, utility bills, rent support, grants, claims, or formal financial aid.</p></div>
+  </aside>
+</section>
+
+<section class="section panel" id="issue-advice">
+  <p class="eyebrow">Illustrate an issue</p>
+  <h2>Describe what is happening and get the first advice path</h2>
+  <div class="split-layout">
+    <form class="tool-panel community-form" id="communityIssueForm">
+      <div class="form-grid two">
+        <label>Area or street
+          <input id="communityArea" type="text" placeholder="Street, neighborhood, city, cross streets">
+        </label>
+        <label>Issue type
+          <select id="communityIssueType">
+            <option value="street">Street or yard flooding</option>
+            <option value="basement">Basement water</option>
+            <option value="sewer">Sewer or drain backup</option>
+            <option value="walls">Wall seepage or foundation water</option>
+            <option value="drain">Blocked drain, ditch, culvert, or catch basin</option>
+            <option value="rebuild">Rebuilding or cleanup support</option>
+            <option value="items">Furniture, supplies, or household items</option>
+          </select>
+        </label>
+        <label class="wide">What do you see?
+          <textarea id="communityDescription" rows="5" placeholder="Water depth, when it happens, what direction water moves, drains nearby, photos you have, what help is needed."></textarea>
+        </label>
+        <label class="wide">Add photos or sketches
+          <input id="communityPhotos" type="file" accept="image/*,.pdf" multiple>
+        </label>
+      </div>
+      <div class="action-row">
+        <button class="btn primary" type="button" id="communityAdviceBtn">Show advice</button>
+        <button class="btn ghost" type="reset" id="communityResetBtn">Clear</button>
+      </div>
+      <p class="fine-print">Entries stay in this browser only unless the resident chooses to share them elsewhere. Do not add unsafe or private images unless the resident is comfortable saving them locally.</p>
+    </form>
+    <section class="tool-panel community-advice" id="communityAdvice" aria-live="polite">
+      <h3>Advice will appear here</h3>
+      <p>Choose an issue type and describe what is happening. The page will suggest the first practical path.</p>
+    </section>
+  </div>
+</section>
+
+<section class="section panel" id="initiatives">
+  <p class="eyebrow">Initiatives</p>
+  <h2>Create or join a neighborhood project</h2>
+  <div class="initiative-grid" id="initiativeGrid">
+    <article><small>Stormwater</small><strong>Rain garden crew</strong><span>Plan small rain gardens, native planting, downspout redirection, and permeable areas where suitable.</span><a class="btn ghost" href="#join-form">Join</a></article>
+    <article><small>Prevention</small><strong>Wall and basement floodproofing</strong><span>Share contractor notes, material lists, utility elevation ideas, sump/backflow maintenance, and safe access improvements.</span><a class="btn ghost" href="#join-form">Join</a></article>
+    <article><small>Cleanup</small><strong>Flood cleanup days</strong><span>Coordinate volunteers, gloves, bins, hauling, documentation help, meals, rides, and supply drop-offs.</span><a class="btn ghost" href="#join-form">Join</a></article>
+    <article><small>Rebuild</small><strong>Rebuilding support circle</strong><span>Help neighbors compare estimates, understand permits, organize receipts, and rebuild with stronger protection.</span><a class="btn ghost" href="#join-form">Join</a></article>
+    <article><small>Items</small><strong>Furniture and household replacement</strong><span>Offer or request beds, tables, appliances, storage bins, cleaning supplies, tools, and temporary storage.</span><a class="btn ghost" href="#join-form">Join</a></article>
+    <article><small>Data</small><strong>Repeated flooding map notes</strong><span>Collect dates, photos, water depth, drains, street flooding, and sewer backup patterns for public planning conversations.</span><a class="btn ghost" href="#join-form">Join</a></article>
+  </div>
+</section>
+
+<section class="section panel" id="offer-help">
+  <p class="eyebrow">Offer support</p>
+  <h2>Tell the community what you can help with</h2>
+  <form class="tool-panel" id="join-form">
+    <div class="form-grid three">
+      <label>Name or group
+        <input id="supportName" type="text" placeholder="Name, team, church, business, neighborhood group">
+      </label>
+      <label>Contact
+        <input id="supportContact" type="text" placeholder="Phone, email, or preferred contact">
+      </label>
+      <label>Area
+        <input id="supportArea" type="text" placeholder="Where can you help?">
+      </label>
+      <label class="wide">Support type
+        <select id="supportType">
+          <option>Volunteer cleanup</option>
+          <option>Rain garden or yard drainage</option>
+          <option>Wall, basement, or floodproofing help</option>
+          <option>Rebuild planning or contractor comparison</option>
+          <option>Furniture, appliances, or household items</option>
+          <option>Tools, pumps, dehumidifiers, or supplies</option>
+          <option>Meals, rides, childcare, translation, or accessibility help</option>
+        </select>
+      </label>
+      <label class="wide">Details
+        <textarea id="supportDetails" rows="4" placeholder="Availability, tools, limits, safety notes, items available, or initiative you want to support."></textarea>
+      </label>
+    </div>
+    <div class="action-row">
+      <button class="btn primary" type="button" id="addSupportBtn">Add local offer</button>
+      <a class="btn ghost" href="index.html#assistance">Need money-based assistance instead</a>
+    </div>
+  </form>
+  <div class="support-list" id="supportList" aria-live="polite"></div>
+</section>
+</main>
+
+<footer class="footer">
+  <p><strong>Important:</strong> Community help should never replace emergency services, licensed safety inspections, permits, insurance decisions, or official assistance programs. Use this page for coordination and local support.</p>
+</footer>
+</div>
+
+<script>
+(function(){
+  if(window.MFR_COMMUNITY_SCRIPT_LOADED) return;
+  window.MFR_COMMUNITY_SCRIPT_LOADED = true;
+  const advice = {
+    street: ["Photograph water depth, direction, drains, curbs, ditches, and timing.", "Add the location to the map page and compare rain, elevation, drains, and impervious surfaces.", "Start or join a rain garden, drain reporting, or repeated-flooding map-note initiative."],
+    basement: ["Do not enter if electricity, gas, sewage, structure, or medical risk is present.", "Photograph water lines, utilities, sump, walls, contents, and exterior water paths.", "Use the immediate-fixes playbook before cleanup and consider sump backup, raised storage, and wall/drainage improvements."],
+    sewer: ["Separate sewer backup from surface floodwater and clean-water leaks.", "Save plumber reports, backup photos, sump/backflow records, cleanup invoices, and utility notices.", "Ask neighbors if similar backups happened at the same time and report patterns to the correct water/sewer or public works contact."],
+    walls: ["Photograph cracks, seepage points, grading, gutters, downspouts, window wells, and water paths.", "Do not cover wet walls with new finishes until moisture and source are addressed.", "Consider exterior drainage, grading, backfill, waterproofing scope, sump/backflow systems, and flood-resistant lower materials."],
+    drain: ["Photograph the blocked drain or ditch without entering unsafe water.", "Record date, time, rainfall, water depth, and nearby impacts.", "Coordinate a reporting group and send consistent evidence to public works, drain office, or local officials."],
+    rebuild: ["Sort work into emergency cleanup, permit-triggering repairs, code requirements, and resilience upgrades.", "Compare contractor scopes and ask what can be raised, protected, or rebuilt with flood-resistant materials.", "Use a rebuild support circle for estimates, permits, receipts, and safe-material choices."],
+    items: ["List what was lost and what is needed: beds, chairs, appliances, storage, clothes, tools, cleaning supplies.", "Keep personal requests separate from insurance inventory if values differ.", "Use the furniture and household replacement initiative to match offers with needs."]
+  };
+
+  const form = document.getElementById("communityIssueForm");
+  const adviceBox = document.getElementById("communityAdvice");
+  const supportList = document.getElementById("supportList");
+  const offers = JSON.parse(localStorage.getItem("mfr-community-offers") || "[]");
+
+  function renderAdvice(){
+    const area = document.getElementById("communityArea").value.trim() || "this area";
+    const type = document.getElementById("communityIssueType").value;
+    const description = document.getElementById("communityDescription").value.trim();
+    const photoCount = document.getElementById("communityPhotos").files.length;
+    const items = advice[type] || advice.street;
+    adviceBox.innerHTML = `
+      <p class="eyebrow">Suggested path</p>
+      <h3>First steps for ${area}</h3>
+      ${description ? `<p>${description.replace(/[<>&]/g, "")}</p>` : ""}
+      ${photoCount ? `<p><strong>${photoCount} file(s) selected.</strong> Keep copies with dates and location notes.</p>` : ""}
+      <ul>${items.map(item => `<li>${item}</li>`).join("")}</ul>
+      <div class="hero-actions">
+        <a class="btn primary" href="index.html#photo-guide">Photo checklist</a>
+        <a class="btn secondary" href="prepare.html">Prepare page</a>
+        <a class="btn ghost" href="index.html#gis">Map data</a>
+      </div>
+    `;
+  }
+
+  function renderOffers(){
+    if(!supportList) return;
+    if(!offers.length){
+      supportList.innerHTML = '<p class="fine-print">No local offers saved in this browser yet.</p>';
+      return;
+    }
+    supportList.innerHTML = offers.map(offer => `
+      <article class="support-card">
+        <small>${offer.type}</small>
+        <strong>${offer.name}</strong>
+        <span>${offer.area}</span>
+        <p>${offer.details}</p>
+        <p><strong>Contact:</strong> ${offer.contact}</p>
+      </article>
+    `).join("");
+  }
+
+  document.getElementById("communityAdviceBtn")?.addEventListener("click", renderAdvice);
+  form?.addEventListener("reset", () => {
+    setTimeout(() => {
+      adviceBox.innerHTML = "<h3>Advice will appear here</h3><p>Choose an issue type and describe what is happening. The page will suggest the first practical path.</p>";
+    }, 0);
+  });
+  document.getElementById("communityResetBtn")?.addEventListener("click", () => {
+    setTimeout(() => {
+      adviceBox.innerHTML = "<h3>Advice will appear here</h3><p>Choose an issue type and describe what is happening. The page will suggest the first practical path.</p>";
+    }, 0);
+  });
+  document.getElementById("addSupportBtn")?.addEventListener("click", () => {
+    const offer = {
+      name: document.getElementById("supportName").value.trim() || "Local supporter",
+      contact: document.getElementById("supportContact").value.trim() || "Not provided",
+      area: document.getElementById("supportArea").value.trim() || "Area not listed",
+      type: document.getElementById("supportType").value,
+      details: document.getElementById("supportDetails").value.trim() || "No details added."
+    };
+    offers.unshift(offer);
+    localStorage.setItem("mfr-community-offers", JSON.stringify(offers.slice(0, 20)));
+    renderOffers();
+  });
+  renderOffers();
+})();
+</script>
+</body>
+</html>
